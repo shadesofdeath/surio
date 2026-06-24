@@ -1,0 +1,219 @@
+{
+  "id": "trafik-isaretleri",
+  "title": "Trafik İşaretleri",
+  "description": "Levhalar, yol çizgileri ve geçiş kuralları",
+  "lesson": [
+    {
+      "h": "İşaret grupları",
+      "p": "Trafik işaretleri görevini şeklinden ve renginden tanırsın. Beş ana grup vardır.",
+      "list": [
+        "Tehlike uyarı: kırmızı kenarlı üçgen",
+        "Trafik tanzim (yasak/emir): yuvarlak",
+        "Bilgi işaretleri: mavi/yeşil dikdörtgen",
+        "Dur ve yol ver: sekizgen ve ters üçgen",
+        "Yatay işaretler: yol üzeri çizgiler"
+      ]
+    },
+    {
+      "h": "Renklerin anlamı",
+      "list": [
+        "Kırmızı: yasaklama ve tehlike",
+        "Mavi: emir ve bilgilendirme",
+        "Yeşil: yön ve otoyol bilgisi",
+        "Sarı: geçici durumlar ve yol çalışması"
+      ]
+    },
+    {
+      "h": "Yol çizgileri",
+      "p": "Yatay işaretler de en az levhalar kadar bağlayıcıdır.",
+      "list": [
+        "Devamlı (tek) çizgi geçilmez, sollama yapılmaz",
+        "Kesik çizgi kurallara uygun geçişe izin verir",
+        "Yaya geçidi çizgilerinde yayaya öncelik verilir"
+      ]
+    },
+    {
+      "h": "Önceliklendirme sırası",
+      "p": "İşaretler çeliştiğinde uyulacak sıra önemlidir: trafik görevlisi > ışıklı işaret cihazı > trafik işaret levhası > yer (yatay) işaretleri. Görevlinin işareti her zaman önceliklidir."
+    },
+    {
+      "h": "Işıklı işaretler",
+      "list": [
+        "Kırmızı: dur",
+        "Sarı: dur çizgisinde güvenle durabiliyorsan dur",
+        "Yeşil: yol açık, dikkatle geç",
+        "Yanıp sönen sarı: yavaşla ve dikkatle geç"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question": "Kırmızı ışıkta sürücünün yapması gereken nedir?",
+      "options": [
+        "Yavaşlayarak geçmek",
+        "Durma çizgisinde tamamen durmak",
+        "Kornaya basmak",
+        "Hızlanarak geçmek"
+      ],
+      "answer": 1,
+      "explanation": "Kırmızı ışık 'dur' demektir; araç durma çizgisinde tam olarak durmalıdır."
+    },
+    {
+      "id": 2,
+      "question": "Sarı (amber) ışık yandığında ne yapılmalıdır?",
+      "options": [
+        "Hızlanıp geçmek",
+        "Durmaya hazırlanmak",
+        "Geri gitmek",
+        "Korna çalmak"
+      ],
+      "answer": 1,
+      "explanation": "Sarı ışık kırmızıya hazırlık uyarısıdır; güvenliyse durulur."
+    },
+    {
+      "id": 3,
+      "question": "Kırmızı çerçeveli üçgen biçimli levhalar neyi belirtir?",
+      "options": [
+        "Tehlike uyarısı",
+        "Yasaklama",
+        "Bilgi",
+        "Park yeri"
+      ],
+      "answer": 0,
+      "explanation": "Kırmızı çerçeveli üçgen levhalar ileride bir tehlikeyi haber veren uyarı işaretleridir."
+    },
+    {
+      "id": 4,
+      "question": "Dairesel ve kırmızı çerçeveli levhalar genellikle neyi ifade eder?",
+      "options": [
+        "Tehlike",
+        "Yasaklama veya kısıtlama",
+        "Yön bilgisi",
+        "Dinlenme alanı"
+      ],
+      "answer": 1,
+      "explanation": "Dairesel kırmızı çerçeveli levhalar yasaklama ve kısıtlama getirir."
+    },
+    {
+      "id": 5,
+      "question": "Mavi zeminli dairesel levhalar ne anlama gelir?",
+      "options": [
+        "Yasaklama",
+        "Mecburi (zorunlu) yön/hareket",
+        "Tehlike",
+        "Geçici uyarı"
+      ],
+      "answer": 1,
+      "explanation": "Mavi zeminli dairesel levhalar mecburi yönü veya zorunlu bir hareketi gösterir."
+    },
+    {
+      "id": 6,
+      "question": "Sekizgen 'DUR' levhasında sürücünün yükümlülüğü nedir?",
+      "options": [
+        "Yavaşlamak yeterli",
+        "Mutlaka durup yol vermek",
+        "Korna çalmak",
+        "Hızlanmak"
+      ],
+      "answer": 1,
+      "explanation": "Araç tam olarak durur, yol açık ve güvenliyse hareket eder."
+    },
+    {
+      "id": 7,
+      "question": "Yol üzerindeki kesik (aralıklı) çizgi ne anlama gelir?",
+      "options": [
+        "Kesinlikle geçilemez",
+        "Uygun ve güvenli koşulda öne geçilebilir",
+        "Park yasağı",
+        "Durma yasağı"
+      ],
+      "answer": 1,
+      "explanation": "Kesik çizgi, güvenli olduğunda şerit değiştirmeye ve öne geçmeye izin verir."
+    },
+    {
+      "id": 8,
+      "question": "Devamlı (kesintisiz) yol çizgisi neyi ifade eder?",
+      "options": [
+        "Serbest geçiş",
+        "Çizgiyi geçmek ve öne geçmek yasaktır",
+        "Park alanı",
+        "Yaya geçidi"
+      ],
+      "answer": 1,
+      "explanation": "Devamlı çizgi geçilemez; sürücü şeridinde kalmak zorundadır."
+    },
+    {
+      "id": 9,
+      "question": "Yerleşim yeri içinde otomobiller için azami hız sınırı kaç km/saattir?",
+      "options": [
+        "30",
+        "50",
+        "70",
+        "90"
+      ],
+      "answer": 1,
+      "explanation": "Aksi belirtilmedikçe yerleşim yeri içinde otomobil için azami hız 50 km/saattir."
+    },
+    {
+      "id": 10,
+      "question": "Otoyolda otomobiller için azami hız sınırı kaç km/saattir?",
+      "options": [
+        "90",
+        "100",
+        "120",
+        "140"
+      ],
+      "answer": 2,
+      "explanation": "Otoyolda otomobiller için azami hız sınırı 120 km/saattir."
+    },
+    {
+      "id": 11,
+      "question": "Trafik ışığı ve görevlinin bulunmadığı kontrolsüz kavşakta geçiş hakkı kimindir?",
+      "options": [
+        "Soldan gelen araç",
+        "Sağdan gelen araç",
+        "Büyük araç",
+        "Hızlı olan araç"
+      ],
+      "answer": 1,
+      "explanation": "Kontrolsüz kavşakta sürücü sağındaki araca yol verir."
+    },
+    {
+      "id": 12,
+      "question": "Trafik görevlisinin işaretleri ile ışıkların çeliştiği durumda hangisine uyulur?",
+      "options": [
+        "Trafik ışığına",
+        "Trafik görevlisine",
+        "Levhalara",
+        "Yol çizgilerine"
+      ],
+      "answer": 1,
+      "explanation": "İşaret sıralamasında en üstte trafik görevlisi bulunur; önce ona uyulur."
+    },
+    {
+      "id": 13,
+      "question": "'Kaygan yol' veya 'gevşek malzeme' gibi levhalar hangi gruba girer?",
+      "options": [
+        "Bilgi işaretleri",
+        "Tehlike uyarı işaretleri",
+        "Park işaretleri",
+        "Mecburi yön işaretleri"
+      ],
+      "answer": 1,
+      "explanation": "Bu levhalar olası bir tehlikeyi önceden bildiren uyarı işaretleridir."
+    },
+    {
+      "id": 14,
+      "question": "Yaya geçidine yaklaşan sürücünün önceliği kime aittir?",
+      "options": [
+        "Sürücüye",
+        "Geçitteki yayaya",
+        "Daha hızlı araca",
+        "Toplu taşımaya"
+      ],
+      "answer": 1,
+      "explanation": "Yaya geçidinde öncelik yayanındır; sürücü yavaşlar, gerekirse durur."
+    }
+  ]
+}
