@@ -1,0 +1,49 @@
+{
+  "id": "cevre-bilgisi",
+  "title": "Çevre Bilgisi",
+  "description": "Çevreyi koruyan ve güvenli sürüş alışkanlıkları",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Aşağıdakilerden hangisi çevreye duyarlı (ekonomik) sürüşe örnektir?",
+      "options": ["Ani hızlanma ve sert fren", "Sabit hızda, yumuşak gaz ve fren kullanımı", "Yüksek devirde gezinme", "Gereksiz rölantide bekleme"],
+      "answer": 1,
+      "explanation": "Yumuşak ve sabit hızlı sürüş hem yakıt tüketimini hem de egzoz emisyonunu azaltır."
+    },
+    {
+      "id": 2,
+      "question": "Araçların egzozundan çıkan gazlar çevreye nasıl etki eder?",
+      "options": ["Havayı temizler", "Hava kirliliğine ve sağlık sorunlarına yol açar", "Hiçbir etkisi yoktur", "Yağışı artırır"],
+      "answer": 1,
+      "explanation": "Egzoz gazları hava kirliliğinin önemli kaynaklarındandır ve solunum sağlığını olumsuz etkiler."
+    },
+    {
+      "id": 3,
+      "question": "Aracın gereksiz yere rölantide (boşta) uzun süre çalıştırılması neye neden olur?",
+      "options": ["Yakıt tasarrufuna", "Gereksiz yakıt tüketimi ve kirliliğe", "Motorun güçlenmesine", "Lastik ömrünün artmasına"],
+      "answer": 1,
+      "explanation": "Uzun rölanti boşa yakıt harcar ve gereksiz emisyon üreterek çevreyi kirletir."
+    },
+    {
+      "id": 4,
+      "question": "Doğru lastik basıncının yakıt ve çevre açısından önemi nedir?",
+      "options": ["Etkisi yoktur", "Yanlış basınç yakıt tüketimini ve emisyonu artırır", "Sadece sesi etkiler", "Farları etkiler"],
+      "answer": 1,
+      "explanation": "Düşük lastik basıncı yuvarlanma direncini artırır; yakıt tüketimi ve emisyon yükselir."
+    },
+    {
+      "id": 5,
+      "question": "Atık motor yağı çevre açısından nasıl değerlendirilmelidir?",
+      "options": ["Toprağa dökülmeli", "Yetkili toplama noktalarına teslim edilmeli", "Suya dökülmeli", "Çöpe atılmalı"],
+      "answer": 1,
+      "explanation": "Atık yağ ciddi bir kirleticidir; doğaya bırakılmamalı, geri kazanım için yetkili yerlere verilmelidir."
+    },
+    {
+      "id": 6,
+      "question": "Gürültü kirliliğini azaltmak için sürücü ne yapmalıdır?",
+      "options": ["Sürekli korna çalmak", "Gereksiz korna ve yüksek devirden kaçınmak", "Camları açmak", "Hızlanmak"],
+      "answer": 1,
+      "explanation": "Gereksiz korna ve yüksek motor devri gürültü kirliliği oluşturur; sakin sürüş bunu azaltır."
+    }
+  ]
+}

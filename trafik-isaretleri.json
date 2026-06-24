@@ -1,0 +1,63 @@
+{
+  "id": "trafik-isaretleri",
+  "title": "Trafik İşaretleri",
+  "description": "Trafik levhaları ve yol işaretleri soruları",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Kırmızı ışıkta sürücünün yapması gereken nedir?",
+      "options": ["Yavaşlayarak geçmek", "Tamamen durmak", "Kornaya basmak", "Hızlanarak geçmek"],
+      "answer": 1,
+      "explanation": "Kırmızı ışık 'dur' anlamına gelir; araç durma çizgisinde tamamen durmalıdır."
+    },
+    {
+      "id": 2,
+      "question": "Sarı ışık yandığında sürücü ne yapmalıdır?",
+      "options": ["Hızlanıp geçmeli", "Durmaya hazırlanmalı", "Geri gitmeli", "Kornaya basmalı"],
+      "answer": 1,
+      "explanation": "Sarı ışık, kırmızıya hazırlık uyarısıdır; güvenliyse durulur, durma çizgisi geçilmişse dikkatle geçilir."
+    },
+    {
+      "id": 3,
+      "question": "Üçgen biçimli ve kırmızı çerçeveli trafik işaretleri ne ifade eder?",
+      "options": ["Tehlike uyarısı", "Yasaklama", "Bilgi", "Mecburi yön"],
+      "answer": 0,
+      "explanation": "Kırmızı çerçeveli üçgen levhalar tehlikeyi önceden haber veren uyarı işaretleridir."
+    },
+    {
+      "id": 4,
+      "question": "Yuvarlak biçimli, kırmızı çerçeveli işaretler genellikle neyi belirtir?",
+      "options": ["Tehlike", "Yasaklama veya kısıtlama", "Park yeri", "Yön bilgisi"],
+      "answer": 1,
+      "explanation": "Dairesel kırmızı çerçeveli levhalar yasaklama ve kısıtlama getiren işaretlerdir."
+    },
+    {
+      "id": 5,
+      "question": "'Dur' (STOP) levhasında sürücünün yükümlülüğü nedir?",
+      "options": ["Yavaşlamak yeterli", "Mutlaka durup yol vermek", "Sadece korna çalmak", "Hızlanmak"],
+      "answer": 1,
+      "explanation": "Sekizgen 'Dur' levhasında araç tam olarak durmalı, yol açık ve güvenliyse hareket etmelidir."
+    },
+    {
+      "id": 6,
+      "question": "Mavi zeminli yuvarlak işaretler ne anlama gelir?",
+      "options": ["Yasaklama", "Mecburi (zorunlu) yön/hareket", "Tehlike", "Geçici uyarı"],
+      "answer": 1,
+      "explanation": "Mavi zeminli dairesel levhalar mecburi yönü veya zorunlu bir hareketi gösterir."
+    },
+    {
+      "id": 7,
+      "question": "Yol üzerindeki kesik çizgilerin anlamı nedir?",
+      "options": ["Kesinlikle geçilemez", "Uygun koşullarda öne geçilebilir", "Park yasağı", "Durma yasağı"],
+      "answer": 1,
+      "explanation": "Kesik yol çizgisi, güvenli olduğunda şerit değiştirmeye ve öne geçmeye izin verir."
+    },
+    {
+      "id": 8,
+      "question": "Devamlı (kesintisiz) yol çizgisi neyi ifade eder?",
+      "options": ["Serbest geçiş", "Çizgiyi geçmek yasaktır", "Park alanı", "Yaya geçidi"],
+      "answer": 1,
+      "explanation": "Tek yönlü devamlı çizgi geçilemez; şeritte kalmak zorunludur."
+    }
+  ]
+}

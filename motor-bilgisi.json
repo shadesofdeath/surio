@@ -1,0 +1,56 @@
+{
+  "id": "motor-bilgisi",
+  "title": "Motor Bilgisi",
+  "description": "Araç tekniği, motor ve bakım soruları",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Motor yağının temel görevi aşağıdakilerden hangisidir?",
+      "options": ["Yakıtı artırmak", "Hareketli parçaları yağlayıp sürtünmeyi azaltmak", "Soğutma suyu sağlamak", "Lastik basıncını ayarlamak"],
+      "answer": 1,
+      "explanation": "Motor yağı, sürtünen parçalar arasında film oluşturarak aşınmayı ve ısınmayı azaltır."
+    },
+    {
+      "id": 2,
+      "question": "Akünün araçtaki temel işlevi nedir?",
+      "options": ["Yakıt depolamak", "Elektrik enerjisi depolayıp marş ve elektrik sistemini beslemek", "Motoru soğutmak", "Fren yapmak"],
+      "answer": 1,
+      "explanation": "Akü, kimyasal enerjiyi elektriğe çevirerek marş motorunu ve elektrik donanımını besler."
+    },
+    {
+      "id": 3,
+      "question": "Motorun aşırı ısınmasının (hararet) en yaygın nedeni hangisidir?",
+      "options": ["Lastik basıncının yüksek olması", "Soğutma suyunun (antifriz) eksik olması", "Farların açık olması", "Yakıtın bitmesi"],
+      "answer": 1,
+      "explanation": "Soğutma sıvısının azalması ya da sistem arızası motor sıcaklığının tehlikeli düzeye çıkmasına yol açar."
+    },
+    {
+      "id": 4,
+      "question": "Fren sisteminin görevi nedir?",
+      "options": ["Aracı hızlandırmak", "Aracın hızını azaltmak ve durdurmak", "Motoru çalıştırmak", "Direksiyonu döndürmek"],
+      "answer": 1,
+      "explanation": "Fren sistemi, tekerleklere sürtünme uygulayarak aracı yavaşlatır ve durdurur."
+    },
+    {
+      "id": 5,
+      "question": "Lastik diş derinliğinin azalması neyi olumsuz etkiler?",
+      "options": ["Yakıt rengini", "Yol tutuşunu ve frenleme mesafesini", "Korna sesini", "Cam sileceklerinini"],
+      "answer": 1,
+      "explanation": "Diş derinliği azaldıkça özellikle ıslak zeminde yol tutuş düşer, fren mesafesi uzar."
+    },
+    {
+      "id": 6,
+      "question": "Debriyaj (kavrama) ne işe yarar?",
+      "options": ["Motoru soğutur", "Motor gücünün şanzımana iletilmesini sağlar/keser", "Yakıt pompalar", "Farları yakar"],
+      "answer": 1,
+      "explanation": "Debriyaj, vites değişiminde motordan gelen gücü tekerleklere bağlayıp ayırmaya yarar."
+    },
+    {
+      "id": 7,
+      "question": "Aracın gösterge panelinde yağ lambasının yanması neyi gösterir?",
+      "options": ["Yakıtın dolu olduğunu", "Motor yağ basıncında sorun olabileceğini", "Kapının açık olduğunu", "Camın açık olduğunu"],
+      "answer": 1,
+      "explanation": "Yanan yağ ikaz lambası düşük yağ basıncına işaret eder; araç güvenli şekilde durdurulmalıdır."
+    }
+  ]
+}

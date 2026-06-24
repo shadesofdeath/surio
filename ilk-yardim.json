@@ -1,0 +1,56 @@
+{
+  "id": "ilk-yardim",
+  "title": "İlk Yardım",
+  "description": "Acil durumlarda temel ilk yardım bilgisi",
+  "questions": [
+    {
+      "id": 1,
+      "question": "İlk yardımın temel amacı aşağıdakilerden hangisidir?",
+      "options": ["Hastalığı tedavi etmek", "Durumun kötüleşmesini önleyip yaşamı korumak", "İlaç yazmak", "Ameliyat yapmak"],
+      "answer": 1,
+      "explanation": "İlk yardım; mevcut durumu kötüleşmekten korumak ve yaşamsal işlevleri sürdürmek amacıyla yapılır."
+    },
+    {
+      "id": 2,
+      "question": "Türkiye'de acil yardım çağrısı için aranması gereken numara hangisidir?",
+      "options": ["155", "110", "112", "156"],
+      "answer": 2,
+      "explanation": "112, sağlık dahil tüm acil durumlar için kullanılan tek acil çağrı numarasıdır."
+    },
+    {
+      "id": 3,
+      "question": "Dış kanamayı durdurmak için ilk yapılması gereken nedir?",
+      "options": ["Yarayı ovmak", "Kanayan bölgeye doğrudan baskı uygulamak", "Su dökmek", "Beklemek"],
+      "answer": 1,
+      "explanation": "Dış kanamada en etkili yöntem, temiz bir bezle yaraya doğrudan ve sürekli baskı uygulamaktır."
+    },
+    {
+      "id": 4,
+      "question": "Bilinci kapalı ancak soluğu olan bir kazazede hangi pozisyona alınır?",
+      "options": ["Sırtüstü", "Koma (yan yatış) pozisyonu", "Oturur", "Yüzüstü"],
+      "answer": 1,
+      "explanation": "Koma pozisyonu, dilin solunum yolunu kapatmasını ve kusmukla boğulmayı önler."
+    },
+    {
+      "id": 5,
+      "question": "Yetişkinde temel yaşam desteğinde göğüs basısı hızı yaklaşık kaç olmalıdır?",
+      "options": ["Dakikada 30-50", "Dakikada 100-120", "Dakikada 150-180", "Dakikada 60'tan az"],
+      "answer": 1,
+      "explanation": "Etkili kalp masajı için dakikada 100-120 bası uygulanır."
+    },
+    {
+      "id": 6,
+      "question": "Kaza yerinde ilk yapılması gereken nedir?",
+      "options": ["Yaralıları hemen taşımak", "Olay yerini ve kendini güvene almak", "Fotoğraf çekmek", "Aracı çalıştırmak"],
+      "answer": 1,
+      "explanation": "Önce olay yeri güvenliği sağlanır; ikincil kazalar ve ek tehlikeler önlenir."
+    },
+    {
+      "id": 7,
+      "question": "Yanık bölgesine ilk müdahalede ne yapılmalıdır?",
+      "options": ["Diş macunu sürmek", "15-20 dakika soğuk/akan su tutmak", "Patlamış kabarcığı açmak", "Buz bastırmak"],
+      "answer": 1,
+      "explanation": "Yanan bölge oda sıcaklığındaki akan su altında soğutulur; macun, yoğurt gibi maddeler sürülmez."
+    }
+  ]
+}

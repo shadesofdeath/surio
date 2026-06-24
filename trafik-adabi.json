@@ -1,0 +1,49 @@
+{
+  "id": "trafik-adabi",
+  "title": "Trafik Adabı",
+  "description": "Sürücü davranışları ve trafikte nezaket",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Trafikte 'yol verme' davranışının temel amacı nedir?",
+      "options": ["Daha hızlı gitmek", "Güvenliği ve düzeni sağlamak", "Korna çalmak", "Park etmek"],
+      "answer": 1,
+      "explanation": "Yol verme, çatışmaları önleyerek trafik akışını güvenli ve düzenli hale getirir."
+    },
+    {
+      "id": 2,
+      "question": "Öfkeli ve agresif sürücülük (yol öfkesi) trafikte neye yol açar?",
+      "options": ["Kaza riskini azaltır", "Kaza ve gerginlik riskini artırır", "Yakıt tasarrufu sağlar", "Hiçbir etkisi yoktur"],
+      "answer": 1,
+      "explanation": "Agresif sürüş, hatalı kararlar ve kaza riskini ciddi biçimde artırır; sakin sürüş güvenlidir."
+    },
+    {
+      "id": 3,
+      "question": "Yaya geçidine yaklaşan sürücü ne yapmalıdır?",
+      "options": ["Hızlanmalı", "Yayalara yol vermeli ve gerekirse durmalı", "Korna çalmalı", "Far yakmalı"],
+      "answer": 1,
+      "explanation": "Yaya geçidinde öncelik yayanındır; sürücü yavaşlar ve gerektiğinde tamamen durur."
+    },
+    {
+      "id": 4,
+      "question": "Gereksiz korna kullanımı trafik adabı açısından nasıl değerlendirilir?",
+      "options": ["Saygılı bir davranıştır", "Rahatsız edici ve uygunsuz bir davranıştır", "Zorunludur", "Hız kazandırır"],
+      "answer": 1,
+      "explanation": "Korna yalnızca tehlikeyi haber vermek için kullanılır; gereksiz kullanım çevreyi rahatsız eder."
+    },
+    {
+      "id": 5,
+      "question": "Ambulans, itfaiye gibi geçiş üstünlüğü olan araçlar sirenle yaklaştığında ne yapılır?",
+      "options": ["Hızlanıp önde gitmek", "Yol açıp kenara çekilmek", "Durup yolu kapatmak", "Takip etmek"],
+      "answer": 1,
+      "explanation": "Geçiş üstünlüğüne sahip araçlara derhal yol verilir; sürücü uygun şekilde kenara çekilir."
+    },
+    {
+      "id": 6,
+      "question": "Trafikte yapılan küçük bir hatada doğru davranış hangisidir?",
+      "options": ["Bağırıp tartışmak", "Sakin kalıp el/işaretle özür dileyebilmek", "Aracı takip etmek", "Korna çalmak"],
+      "answer": 1,
+      "explanation": "Hoşgörü ve sakinlik trafik adabının temelidir; gerginliği büyütmemek güvenliği artırır."
+    }
+  ]
+}
