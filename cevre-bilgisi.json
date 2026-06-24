@@ -3,47 +3,17 @@
   "title": "Çevre Bilgisi",
   "description": "Çevreyi koruyan ve güvenli sürüş alışkanlıkları",
   "questions": [
-    {
-      "id": 1,
-      "question": "Aşağıdakilerden hangisi çevreye duyarlı (ekonomik) sürüşe örnektir?",
-      "options": ["Ani hızlanma ve sert fren", "Sabit hızda, yumuşak gaz ve fren kullanımı", "Yüksek devirde gezinme", "Gereksiz rölantide bekleme"],
-      "answer": 1,
-      "explanation": "Yumuşak ve sabit hızlı sürüş hem yakıt tüketimini hem de egzoz emisyonunu azaltır."
-    },
-    {
-      "id": 2,
-      "question": "Araçların egzozundan çıkan gazlar çevreye nasıl etki eder?",
-      "options": ["Havayı temizler", "Hava kirliliğine ve sağlık sorunlarına yol açar", "Hiçbir etkisi yoktur", "Yağışı artırır"],
-      "answer": 1,
-      "explanation": "Egzoz gazları hava kirliliğinin önemli kaynaklarındandır ve solunum sağlığını olumsuz etkiler."
-    },
-    {
-      "id": 3,
-      "question": "Aracın gereksiz yere rölantide (boşta) uzun süre çalıştırılması neye neden olur?",
-      "options": ["Yakıt tasarrufuna", "Gereksiz yakıt tüketimi ve kirliliğe", "Motorun güçlenmesine", "Lastik ömrünün artmasına"],
-      "answer": 1,
-      "explanation": "Uzun rölanti boşa yakıt harcar ve gereksiz emisyon üreterek çevreyi kirletir."
-    },
-    {
-      "id": 4,
-      "question": "Doğru lastik basıncının yakıt ve çevre açısından önemi nedir?",
-      "options": ["Etkisi yoktur", "Yanlış basınç yakıt tüketimini ve emisyonu artırır", "Sadece sesi etkiler", "Farları etkiler"],
-      "answer": 1,
-      "explanation": "Düşük lastik basıncı yuvarlanma direncini artırır; yakıt tüketimi ve emisyon yükselir."
-    },
-    {
-      "id": 5,
-      "question": "Atık motor yağı çevre açısından nasıl değerlendirilmelidir?",
-      "options": ["Toprağa dökülmeli", "Yetkili toplama noktalarına teslim edilmeli", "Suya dökülmeli", "Çöpe atılmalı"],
-      "answer": 1,
-      "explanation": "Atık yağ ciddi bir kirleticidir; doğaya bırakılmamalı, geri kazanım için yetkili yerlere verilmelidir."
-    },
-    {
-      "id": 6,
-      "question": "Gürültü kirliliğini azaltmak için sürücü ne yapmalıdır?",
-      "options": ["Sürekli korna çalmak", "Gereksiz korna ve yüksek devirden kaçınmak", "Camları açmak", "Hızlanmak"],
-      "answer": 1,
-      "explanation": "Gereksiz korna ve yüksek motor devri gürültü kirliliği oluşturur; sakin sürüş bunu azaltır."
-    }
+    { "id":1, "question":"Aşağıdakilerden hangisi çevreye duyarlı (ekonomik) sürüşe örnektir?", "options":["Ani hızlanma ve sert fren","Sabit hızda, yumuşak gaz ve fren kullanımı","Yüksek devirde gezinmek","Gereksiz rölantide beklemek"], "answer":1, "explanation":"Yumuşak ve sabit hızlı sürüş hem yakıtı hem egzoz emisyonunu azaltır." },
+    { "id":2, "question":"Araç egzozundan çıkan gazlar çevreye nasıl etki eder?", "options":["Havayı temizler","Hava kirliliğine ve sağlık sorunlarına yol açar","Hiçbir etkisi yoktur","Yağışı artırır"], "answer":1, "explanation":"Egzoz gazları hava kirliliğinin önemli kaynaklarındandır ve solunum sağlığını bozar." },
+    { "id":3, "question":"Aracın gereksiz yere uzun süre rölantide çalıştırılması neye neden olur?", "options":["Yakıt tasarrufu","Boşa yakıt tüketimi ve gereksiz kirlilik","Motorun güçlenmesi","Lastik ömrünün artması"], "answer":1, "explanation":"Uzun rölanti boşa yakıt harcar ve gereksiz emisyon üreterek çevreyi kirletir." },
+    { "id":4, "question":"Doğru lastik basıncının çevre ve yakıt açısından önemi nedir?", "options":["Etkisi yoktur","Düşük basınç yakıt tüketimini ve emisyonu artırır","Sadece sesi etkiler","Farları etkiler"], "answer":1, "explanation":"Düşük basınç yuvarlanma direncini artırır; yakıt tüketimi ve emisyon yükselir." },
+    { "id":5, "question":"Atık (kullanılmış) motor yağı nasıl bertaraf edilmelidir?", "options":["Toprağa dökülmeli","Yetkili toplama noktalarına teslim edilmeli","Suya dökülmeli","Normal çöpe atılmalı"], "answer":1, "explanation":"Atık yağ ciddi bir kirleticidir; doğaya bırakılmaz, geri kazanım için yetkili yerlere verilir." },
+    { "id":6, "question":"Gürültü kirliliğini azaltmak için sürücü ne yapmalıdır?", "options":["Sürekli korna çalmak","Gereksiz korna ve yüksek motor devrinden kaçınmak","Camları açmak","Hızlanmak"], "answer":1, "explanation":"Gereksiz korna ve yüksek devir gürültü kirliliği oluşturur; sakin sürüş bunu azaltır." },
+    { "id":7, "question":"Düzenli araç bakımının çevreye katkısı nedir?", "options":["Hiçbir katkısı yok","Egzoz emisyonunu ve yakıt tüketimini düşürür","Sadece sesi değiştirir","Lastiği büyütür"], "answer":1, "explanation":"Bakımlı motor daha temiz yanma sağlar; emisyon ve yakıt tüketimi azalır." },
+    { "id":8, "question":"Trafik yoğunluğunu ve toplam emisyonu azaltan davranış hangisidir?", "options":["Tek başına araç kullanmak","Toplu taşıma veya araç paylaşımını tercih etmek","Boş yere tur atmak","Motoru açık bırakmak"], "answer":1, "explanation":"Toplu taşıma ve araç paylaşımı yol başına düşen emisyonu ve trafiği azaltır." },
+    { "id":9, "question":"Ani hızlanma ve sert frenlerle sürüş çevre açısından ne yapar?", "options":["Yakıt tasarrufu sağlar","Yakıt tüketimini ve egzoz emisyonunu artırır","Hiç etkilemez","Lastiği korur"], "answer":1, "explanation":"Sert hızlanma/fren motor yükünü artırır; daha çok yakıt yakılır ve daha çok kirlilik oluşur." },
+    { "id":10, "question":"Kısa mesafede kırmızı ışıkta uzun süre beklerken çevreci davranış hangisidir?", "options":["Motoru yüksek devirde tutmak","Uzun beklemelerde motoru gereksiz çalıştırmamak","Korna çalmak","Klimayı sonuna açmak"], "answer":1, "explanation":"Uzun beklemelerde motoru boşta tutmamak gereksiz yakıt ve emisyonu önler." },
+    { "id":11, "question":"Çevreyi korumak için araç camından çöp atmak yerine ne yapılmalıdır?", "options":["Yola atmak","Atığı araçta biriktirip uygun çöp kutusuna atmak","Yakmak","Toprağa gömmek"], "answer":1, "explanation":"Atıklar yola atılmaz; biriktirilip uygun atık kutularına bırakılır." },
+    { "id":12, "question":"Yakıt türüne uygun, temiz yanan bir motor için en doğru yaklaşım hangisidir?", "options":["Bakımı ertelemek","Periyodik bakım ve filtre değişimlerini zamanında yaptırmak","Yağı hiç değiştirmemek","Yüksek devirde gezmek"], "answer":1, "explanation":"Zamanında bakım ve filtre değişimi verimli, temiz yanma sağlar ve emisyonu düşürür." }
   ]
 }
