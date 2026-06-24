@@ -3,54 +3,19 @@
   "title": "Motor Bilgisi",
   "description": "Araç tekniği, motor ve bakım soruları",
   "questions": [
-    {
-      "id": 1,
-      "question": "Motor yağının temel görevi aşağıdakilerden hangisidir?",
-      "options": ["Yakıtı artırmak", "Hareketli parçaları yağlayıp sürtünmeyi azaltmak", "Soğutma suyu sağlamak", "Lastik basıncını ayarlamak"],
-      "answer": 1,
-      "explanation": "Motor yağı, sürtünen parçalar arasında film oluşturarak aşınmayı ve ısınmayı azaltır."
-    },
-    {
-      "id": 2,
-      "question": "Akünün araçtaki temel işlevi nedir?",
-      "options": ["Yakıt depolamak", "Elektrik enerjisi depolayıp marş ve elektrik sistemini beslemek", "Motoru soğutmak", "Fren yapmak"],
-      "answer": 1,
-      "explanation": "Akü, kimyasal enerjiyi elektriğe çevirerek marş motorunu ve elektrik donanımını besler."
-    },
-    {
-      "id": 3,
-      "question": "Motorun aşırı ısınmasının (hararet) en yaygın nedeni hangisidir?",
-      "options": ["Lastik basıncının yüksek olması", "Soğutma suyunun (antifriz) eksik olması", "Farların açık olması", "Yakıtın bitmesi"],
-      "answer": 1,
-      "explanation": "Soğutma sıvısının azalması ya da sistem arızası motor sıcaklığının tehlikeli düzeye çıkmasına yol açar."
-    },
-    {
-      "id": 4,
-      "question": "Fren sisteminin görevi nedir?",
-      "options": ["Aracı hızlandırmak", "Aracın hızını azaltmak ve durdurmak", "Motoru çalıştırmak", "Direksiyonu döndürmek"],
-      "answer": 1,
-      "explanation": "Fren sistemi, tekerleklere sürtünme uygulayarak aracı yavaşlatır ve durdurur."
-    },
-    {
-      "id": 5,
-      "question": "Lastik diş derinliğinin azalması neyi olumsuz etkiler?",
-      "options": ["Yakıt rengini", "Yol tutuşunu ve frenleme mesafesini", "Korna sesini", "Cam sileceklerinini"],
-      "answer": 1,
-      "explanation": "Diş derinliği azaldıkça özellikle ıslak zeminde yol tutuş düşer, fren mesafesi uzar."
-    },
-    {
-      "id": 6,
-      "question": "Debriyaj (kavrama) ne işe yarar?",
-      "options": ["Motoru soğutur", "Motor gücünün şanzımana iletilmesini sağlar/keser", "Yakıt pompalar", "Farları yakar"],
-      "answer": 1,
-      "explanation": "Debriyaj, vites değişiminde motordan gelen gücü tekerleklere bağlayıp ayırmaya yarar."
-    },
-    {
-      "id": 7,
-      "question": "Aracın gösterge panelinde yağ lambasının yanması neyi gösterir?",
-      "options": ["Yakıtın dolu olduğunu", "Motor yağ basıncında sorun olabileceğini", "Kapının açık olduğunu", "Camın açık olduğunu"],
-      "answer": 1,
-      "explanation": "Yanan yağ ikaz lambası düşük yağ basıncına işaret eder; araç güvenli şekilde durdurulmalıdır."
-    }
+    { "id":1, "question":"Motor yağının temel görevi nedir?", "options":["Yakıtı artırmak","Hareketli parçaları yağlayıp sürtünmeyi azaltmak","Soğutma suyu sağlamak","Lastik basıncını ayarlamak"], "answer":1, "explanation":"Motor yağı sürtünen parçalar arasında film oluşturarak aşınmayı ve ısınmayı azaltır." },
+    { "id":2, "question":"Akünün araçtaki temel işlevi nedir?", "options":["Yakıt depolamak","Elektrik enerjisi depolayıp marş ve elektrik sistemini beslemek","Motoru soğutmak","Fren yapmak"], "answer":1, "explanation":"Akü kimyasal enerjiyi elektriğe çevirerek marşı ve elektrik donanımını besler." },
+    { "id":3, "question":"Şarj sistemi (alternatör) ne işe yarar?", "options":["Yakıt pompalar","Çalışırken aküyü şarj eder ve elektrik üretir","Motoru yağlar","Frenleri çalıştırır"], "answer":1, "explanation":"Alternatör motor çalışırken elektrik üretir ve aküyü şarj eder." },
+    { "id":4, "question":"Motorun aşırı ısınmasının (hararet) en yaygın nedeni nedir?", "options":["Yüksek lastik basıncı","Soğutma suyunun (antifriz) eksik olması","Farların açık olması","Yakıtın bitmesi"], "answer":1, "explanation":"Soğutma sıvısının azalması veya sistem arızası motor sıcaklığını tehlikeli düzeye çıkarır." },
+    { "id":5, "question":"Antifrizin görevi aşağıdakilerden hangisidir?", "options":["Yakıt tasarrufu","Soğutma suyunun donmasını ve aşırı kaynamasını önlemek","Motoru yağlamak","Lastiği korumak"], "answer":1, "explanation":"Antifriz soğutma sıvısının kışın donmasını, yazın aşırı kaynamasını engeller." },
+    { "id":6, "question":"Fren sisteminin görevi nedir?", "options":["Aracı hızlandırmak","Aracın hızını azaltmak ve durdurmak","Motoru çalıştırmak","Direksiyonu döndürmek"], "answer":1, "explanation":"Fren sistemi tekerleklere sürtünme uygulayarak aracı yavaşlatır ve durdurur." },
+    { "id":7, "question":"ABS fren sisteminin temel faydası nedir?", "options":["Daha hızlı gitmek","Ani frende tekerleklerin kilitlenmesini önleyip yön hakimiyetini korumak","Yakıt tasarrufu","Farları açmak"], "answer":1, "explanation":"ABS, sert frende tekerlek kilitlenmesini önler; araç kayarken yönlendirilebilir kalır." },
+    { "id":8, "question":"Debriyaj (kavrama) ne işe yarar?", "options":["Motoru soğutur","Motor gücünün şanzımana iletilmesini sağlar ve keser","Yakıt pompalar","Farları yakar"], "answer":1, "explanation":"Debriyaj, vites değişiminde motor gücünü tekerleklere bağlayıp ayırmaya yarar." },
+    { "id":9, "question":"Gösterge panelinde yağ ikaz lambasının yanması neyi gösterir?", "options":["Yakıtın dolu olduğunu","Motor yağ basıncında sorun olabileceğini","Kapının açık olduğunu","Lastiğin patlak olduğunu"], "answer":1, "explanation":"Yanan yağ lambası düşük yağ basıncına işaret eder; araç güvenle durdurulmalıdır." },
+    { "id":10, "question":"Lastik diş derinliğinin azalması neyi olumsuz etkiler?", "options":["Yakıt rengini","Yol tutuşunu ve frenleme mesafesini","Korna sesini","Cam sileceklerini"], "answer":1, "explanation":"Diş azaldıkça özellikle ıslak zeminde yol tutuş düşer, fren mesafesi uzar." },
+    { "id":11, "question":"Motor yağ seviyesi en doğru nasıl kontrol edilir?", "options":["Motor çok sıcakken ve eğimde","Araç düz zeminde, motor durmuş ve soğukken","Araç hareket halindeyken","Yağmurda"], "answer":1, "explanation":"Doğru ölçüm için araç düz zeminde, motor durdurulmuş ve yağ sakinleşmiş olmalıdır." },
+    { "id":12, "question":"Marş motorunun görevi nedir?", "options":["Aracı frenlemek","Motoru ilk hareketle çalıştırmak","Yakıt üretmek","Direksiyonu döndürmek"], "answer":1, "explanation":"Marş motoru, içten yanmalı motoru çalışmaya başlatacak ilk dönme hareketini verir." },
+    { "id":13, "question":"Rölanti devri ne anlama gelir?", "options":["Aracın en yüksek hızı","Motorun boşta, gaz verilmeden çalıştığı en düşük devir","Fren mesafesi","Vites oranı"], "answer":1, "explanation":"Rölanti, araç dururken motorun gaz verilmeden çalıştığı en düşük çalışma devridir." },
+    { "id":14, "question":"Direksiyon hakimiyetini kaybetmemek için aşağıdakilerden hangisi doğrudur?", "options":["Tek elle sürmek","İki eli direksiyonda tutmak ve uygun hızda gitmek","Yüksek hızda virajа girmek","Telefonla ilgilenmek"], "answer":1, "explanation":"Yol ve hava şartına uygun hız ve iki elin direksiyonda olması hakimiyeti korur." }
   ]
 }
