@@ -96,7 +96,7 @@
       --good:#159B57; --good-soft:#E4F6EC; --bad:#E0414A; --bad-soft:#FBE7E8; --warn:#E89B1C;
       --shadow:0 1px 2px rgba(12,17,24,.04), 0 14px 34px -18px rgba(12,17,24,.22);
       --shadow-sm:0 1px 2px rgba(12,17,24,.05);
-      --radius:20px; --radius-sm:14px;
+      --radius:16px; --radius-sm:11px;
     }
     .dark{
       --bg:#080A0F; --surface:#11151D; --surface-2:#171C26;
@@ -129,13 +129,13 @@
     /* Butonlar */
     .btn{ display:inline-flex; align-items:center; justify-content:center; gap:.5rem; font-weight:600;
       border-radius:var(--radius-sm); border:1px solid transparent; cursor:pointer; transition:.18s ease;
-      height:46px; padding:0 20px; font-size:15px; }
+      height:42px; padding:0 16px; font-size:14px; }
     .btn:active{ transform:translateY(1px); }
     .btn-primary{ background:var(--accent); color:#fff; box-shadow:0 6px 16px -8px var(--accent); }
     .btn-primary:hover{ background:var(--accent-ink); }
     .btn-ghost{ background:var(--surface); color:var(--ink); border-color:var(--line); }
     .btn-ghost:hover{ background:var(--surface-2); border-color:var(--faint); }
-    .btn-lg{ height:54px; padding:0 26px; font-size:16px; }
+    .btn-lg{ height:48px; padding:0 22px; font-size:15px; }
     .btn:disabled{ opacity:.4; cursor:not-allowed; transform:none; }
 
     /* Nav */
@@ -144,25 +144,29 @@
     .navlink.active{ color:var(--ink); }
     .navlink.active::after{ content:""; position:absolute; left:0; right:0; bottom:-19px; height:2px; background:var(--accent); border-radius:2px; }
 
+    /* Konu detay sekmeleri (segmented control) */
+    .dtab{ padding:7px 16px; border-radius:9px; font-weight:600; font-size:13.5px; color:var(--muted); transition:.16s; }
+    .dtab--on{ background:var(--surface); color:var(--ink); box-shadow:var(--shadow-sm); }
+
     /* Sayfa geçişi */
     .page{ animation:rise .32s cubic-bezier(.2,.7,.2,1) both; }
     @keyframes rise{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:none; } }
 
     /* Konu kartı ikon çipi */
-    .chip{ display:grid; place-items:center; width:48px; height:48px; border-radius:13px; background:var(--surface-2);
+    .chip{ display:grid; place-items:center; width:40px; height:40px; border-radius:11px; background:var(--surface-2);
       border:1px solid var(--line); color:var(--muted); transition:.2s; }
     .topic-card:hover .chip{ background:var(--accent); color:#fff; border-color:var(--accent); }
     .topic-card{ transition:.2s; }
     .topic-card:hover{ transform:translateY(-3px); border-color:color-mix(in srgb,var(--accent) 45%, var(--line)); }
 
     /* Quiz şıkları */
-    .opt{ display:flex; align-items:center; gap:14px; width:100%; text-align:left;
-      padding:16px 16px; border-radius:var(--radius-sm); border:1.5px solid var(--line);
-      background:var(--surface); font-weight:500; font-size:15.5px; cursor:pointer; transition:.16s; color:var(--ink); }
+    .opt{ display:flex; align-items:center; gap:12px; width:100%; text-align:left;
+      padding:13px 14px; border-radius:var(--radius-sm); border:1.5px solid var(--line);
+      background:var(--surface); font-weight:500; font-size:14.5px; cursor:pointer; transition:.16s; color:var(--ink); }
     .opt:hover:not(:disabled){ border-color:var(--accent); background:var(--surface-2); }
     .opt:disabled{ cursor:default; }
-    .opt .key{ display:grid; place-items:center; width:30px; height:30px; border-radius:9px; flex:none;
-      background:var(--surface-2); border:1px solid var(--line); font-weight:700; font-size:13px; color:var(--muted); transition:.16s; }
+    .opt .key{ display:grid; place-items:center; width:26px; height:26px; border-radius:8px; flex:none;
+      background:var(--surface-2); border:1px solid var(--line); font-weight:700; font-size:12px; color:var(--muted); transition:.16s; }
     .opt--correct{ border-color:var(--good); background:var(--good-soft); }
     .opt--correct .key{ background:var(--good); border-color:var(--good); color:#fff; }
     .opt--wrong{ border-color:var(--bad); background:var(--bad-soft); }
@@ -196,107 +200,130 @@
   <!-- ===================== ÜST BAR ===================== -->
   <header class="sticky top-0 z-40">
     <div class="backdrop-blur-xl" style="background:color-mix(in srgb, var(--bg) 82%, transparent); border-bottom:1px solid var(--line);">
-      <div class="mx-auto max-w-5xl px-5 h-[68px] flex items-center gap-6">
+      <div class="mx-auto max-w-5xl px-5 h-[56px] flex items-center gap-5">
         <button onclick="go('home')" class="flex items-center gap-2.5 shrink-0">
-          <span class="grid place-items-center w-9 h-9 rounded-xl text-white" style="background:var(--accent);">
-            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.1"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.6"/><path d="M12 3.2v5.5M5.4 7.4l4 2.6M18.6 7.4l-4 2.6M6.6 19.4l3.1-4.6M17.4 19.4l-3.1-4.6"/></svg>
+          <span class="grid place-items-center w-8 h-8 rounded-[10px] text-white" style="background:var(--accent);">
+            <svg viewBox="0 0 24 24" class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2.1"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.6"/><path d="M12 3.2v5.5M5.4 7.4l4 2.6M18.6 7.4l-4 2.6M6.6 19.4l3.1-4.6M17.4 19.4l-3.1-4.6"/></svg>
           </span>
-          <span class="disp font-bold text-[19px]">Sürio</span>
+          <span class="disp font-bold text-[17px]">Sürio</span>
         </button>
 
-        <nav class="hidden sm:flex items-center gap-7 text-[15px]">
+        <nav class="hidden sm:flex items-center gap-6 text-[14px]">
           <button data-nav="home"   onclick="go('home')"   class="navlink">Ana Sayfa</button>
           <button data-nav="topics" onclick="go('topics')" class="navlink">Konular</button>
           <button data-nav="stats"  onclick="go('stats')"  class="navlink">İstatistik</button>
         </nav>
 
-        <button onclick="toggleTheme()" aria-label="Tema" class="ml-auto grid place-items-center w-10 h-10 rounded-xl hair border transition hover:bg-[var(--surface-2)]">
-          <svg id="iconSun" class="w-[18px] h-[18px] hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-          <svg id="iconMoon" class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <button onclick="toggleTheme()" aria-label="Tema" class="ml-auto grid place-items-center w-9 h-9 rounded-[10px] hair border transition hover:bg-[var(--surface-2)]">
+          <svg id="iconSun" class="w-[17px] h-[17px] hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg id="iconMoon" class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
         </button>
-        <button onclick="go('topics')" class="btn btn-primary hidden sm:inline-flex h-10">Teste Başla</button>
+        <button onclick="go('topics')" class="btn btn-primary hidden sm:inline-flex h-9">Teste Başla</button>
       </div>
     </div>
   </header>
 
-  <main class="mx-auto max-w-5xl px-5 pt-8 pb-32 sm:pb-16">
+  <main class="mx-auto max-w-5xl px-5 pt-6 pb-28 sm:pb-12">
 
     <!-- ===================== ANA SAYFA ===================== -->
     <section id="page-home" class="page">
-      <div class="grid lg:grid-cols-[1.15fr,.85fr] gap-10 items-center">
+      <div class="grid lg:grid-cols-[1.15fr,.85fr] gap-8 items-center">
         <div>
-          <p class="eyebrow mb-4">2026 Müfredatı · Ücretsiz</p>
-          <h1 class="text-[40px] sm:text-[56px] leading-[1.02] font-bold">Ehliyet sınavına<br><span style="color:var(--accent)">hazır</span> ol.</h1>
-          <p class="mt-5 text-[17px] muted max-w-md leading-relaxed">
-            Konu konu test çöz, her sorunun ardından doğru cevabı ve açıklamasını gör, ilerlemeni takip et. Hesap gerekmez.
+          <p class="eyebrow mb-3">2026 Müfredatı · Ücretsiz</p>
+          <h1 class="text-[30px] sm:text-[42px] leading-[1.05] font-bold">Ehliyet sınavına<br><span style="color:var(--accent)">hazır</span> ol.</h1>
+          <p class="mt-4 text-[15px] muted max-w-md leading-relaxed">
+            Konu konu çalış, her test sonrası doğru cevabı ve açıklamasını gör, ilerlemeni takip et. Hesap gerekmez.
           </p>
-          <div class="mt-8 flex flex-wrap gap-3">
+          <div class="mt-6 flex flex-wrap gap-3">
             <button onclick="go('topics')" class="btn btn-primary btn-lg">Teste Başla</button>
             <button onclick="go('stats')" class="btn btn-ghost btn-lg">İlerlemem</button>
           </div>
-          <div id="homeStats" class="mt-9 flex items-center gap-7 text-sm"></div>
+          <div id="homeStats" class="mt-7 flex items-center gap-6 text-sm"></div>
         </div>
 
         <!-- Gösterge motifi -->
         <div class="hidden lg:block">
-          <div class="card p-8 relative overflow-hidden">
+          <div class="card p-6 relative overflow-hidden">
             <div class="lane absolute top-0 left-0 right-0 opacity-60"></div>
-            <p class="eyebrow mb-6">Hazırlık Paneli</p>
+            <p class="eyebrow mb-5">Hazırlık Paneli</p>
             <div class="relative w-full grid place-items-center">
-              <svg viewBox="0 0 220 220" class="w-[230px] h-[230px]">
+              <svg viewBox="0 0 220 220" class="w-[180px] h-[180px]">
                 <path d="M48.7 171.3 A86 86 0 1 1 171.3 171.3" fill="none" stroke="var(--line)" stroke-width="14" stroke-linecap="round"/>
                 <path id="heroArc" d="M48.7 171.3 A86 86 0 1 1 171.3 171.3" fill="none" stroke="var(--accent)" stroke-width="14" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" class="gauge-val"/>
               </svg>
-              <div class="absolute inset-0 grid place-items-center text-center" style="top:14px">
+              <div class="absolute inset-0 grid place-items-center text-center" style="top:10px">
                 <div>
-                  <div class="disp text-[46px] font-bold leading-none tabnum">6</div>
+                  <div class="disp text-[36px] font-bold leading-none tabnum">6</div>
                   <div class="eyebrow mt-1">Konu Başlığı</div>
                 </div>
               </div>
             </div>
             <div class="mt-2 grid grid-cols-3 gap-2 text-center">
-              <div><div class="disp text-lg font-bold tabnum" id="heroQ">—</div><div class="text-[11px] faint">soru</div></div>
-              <div><div class="disp text-lg font-bold tabnum">10</div><div class="text-[11px] faint">puan/doğru</div></div>
-              <div><div class="disp text-lg font-bold tabnum">∞</div><div class="text-[11px] faint">tekrar</div></div>
+              <div><div class="disp text-base font-bold tabnum" id="heroQ">—</div><div class="text-[11px] faint">soru</div></div>
+              <div><div class="disp text-base font-bold tabnum">10</div><div class="text-[11px] faint">puan/doğru</div></div>
+              <div><div class="disp text-base font-bold tabnum">∞</div><div class="text-[11px] faint">tekrar</div></div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Değer noktaları -->
-      <div class="grid sm:grid-cols-3 gap-4 mt-12">
-        <div class="card p-6">
-          <div class="w-10 h-10 rounded-xl grid place-items-center mb-4" style="background:var(--accent-soft);color:var(--accent-ink)">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+      <div class="grid sm:grid-cols-3 gap-3 mt-10">
+        <div class="card p-5">
+          <div class="w-9 h-9 rounded-[10px] grid place-items-center mb-3" style="background:var(--accent-soft);color:var(--accent-ink)">
+            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
           </div>
-          <h3 class="font-semibold text-lg mb-1">Anında açıklama</h3>
-          <p class="muted text-sm leading-relaxed">Her cevaptan sonra doğrusunu ve nedenini gör, ezberleme öğren.</p>
+          <h3 class="font-semibold text-[15px] mb-1">Anında açıklama</h3>
+          <p class="muted text-[13px] leading-relaxed">Her cevaptan sonra doğrusunu ve nedenini gör, ezberleme öğren.</p>
         </div>
-        <div class="card p-6">
-          <div class="w-10 h-10 rounded-xl grid place-items-center mb-4" style="background:var(--accent-soft);color:var(--accent-ink)">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        <div class="card p-5">
+          <div class="w-9 h-9 rounded-[10px] grid place-items-center mb-3" style="background:var(--accent-soft);color:var(--accent-ink)">
+            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
           </div>
-          <h3 class="font-semibold text-lg mb-1">İlerleme takibi</h3>
-          <p class="muted text-sm leading-relaxed">Çözdüğün testler bu cihazda saklanır; güçlü ve zayıf konularını gör.</p>
+          <h3 class="font-semibold text-[15px] mb-1">İlerleme takibi</h3>
+          <p class="muted text-[13px] leading-relaxed">Çözdüğün testler bu cihazda saklanır; güçlü ve zayıf konularını gör.</p>
         </div>
-        <div class="card p-6">
-          <div class="w-10 h-10 rounded-xl grid place-items-center mb-4" style="background:var(--accent-soft);color:var(--accent-ink)">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div class="card p-5">
+          <div class="w-9 h-9 rounded-[10px] grid place-items-center mb-3" style="background:var(--accent-soft);color:var(--accent-ink)">
+            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
           </div>
-          <h3 class="font-semibold text-lg mb-1">Süre ile pratik</h3>
-          <p class="muted text-sm leading-relaxed">Gerçek sınav gibi süre tutulur, tempona alışırsın.</p>
+          <h3 class="font-semibold text-[15px] mb-1">Süre ile pratik</h3>
+          <p class="muted text-[13px] leading-relaxed">Gerçek sınav gibi süre tutulur, tempona alışırsın.</p>
         </div>
       </div>
     </section>
 
     <!-- ===================== KONULAR ===================== -->
     <section id="page-topics" class="page hidden">
-      <div class="mb-7">
-        <p class="eyebrow mb-2">Test Bankası</p>
-        <h2 class="text-3xl font-bold">Konu seç</h2>
-        <p class="muted mt-1">Çözmek istediğin başlığa dokun.</p>
+      <div class="mb-6">
+        <p class="eyebrow mb-1.5">Test Bankası</p>
+        <h2 class="text-2xl font-bold">Konu seç</h2>
+        <p class="muted text-sm mt-1">Bir başlığa dokun; konu anlatımını oku, ardından testleri çöz.</p>
       </div>
-      <div id="topicGrid" class="grid sm:grid-cols-2 gap-4"></div>
+      <div id="topicGrid" class="grid sm:grid-cols-2 gap-3"></div>
+    </section>
+
+    <!-- ===================== KONU DETAY (anlatım + testler) ===================== -->
+    <section id="page-detail" class="page hidden">
+      <button onclick="go('topics')" class="inline-flex items-center gap-1.5 text-sm muted hover:text-[var(--ink)] transition mb-5">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>Konular
+      </button>
+
+      <div class="flex items-start gap-3.5 mb-6">
+        <span id="detailIcon" class="chip shrink-0" style="width:46px;height:46px"></span>
+        <div class="min-w-0 pt-0.5">
+          <h2 id="detailTitle" class="text-2xl font-bold leading-tight"></h2>
+          <p id="detailDesc" class="muted text-sm mt-0.5"></p>
+        </div>
+      </div>
+
+      <div class="inline-flex p-1 rounded-[12px] mb-6" style="background:var(--surface-2);border:1px solid var(--line)">
+        <button id="tabLesson" onclick="detailTab('lesson')" class="dtab">Konu Anlatımı</button>
+        <button id="tabTests"  onclick="detailTab('tests')"  class="dtab">Testler</button>
+      </div>
+
+      <div id="detailLesson" class="space-y-3"></div>
+      <div id="detailTests" class="hidden grid sm:grid-cols-2 gap-3"></div>
     </section>
 
     <!-- ===================== QUIZ (tam ekran, sabit üst + alt) ===================== -->
@@ -324,10 +351,10 @@
       <!-- ── KAYAN İÇERİK ── -->
       <div class="flex-1 overflow-y-auto">
         <div class="mx-auto max-w-2xl px-4 py-6">
-          <div class="card p-5 sm:p-7">
-            <h3 id="quizQuestion" class="text-[19px] sm:text-[21px] font-semibold leading-snug mb-5 disp"></h3>
+          <div class="card p-4 sm:p-5">
+            <h3 id="quizQuestion" class="text-[17px] sm:text-[18px] font-semibold leading-snug mb-4 disp"></h3>
             <div id="quizOptions" class="grid gap-2.5"></div>
-            <div id="quizExplain" class="hidden mt-4 rounded-[14px] p-4 text-[14px] leading-relaxed"></div>
+            <div id="quizExplain" class="hidden mt-4 rounded-[11px] p-3.5 text-[13.5px] leading-relaxed"></div>
           </div>
         </div>
       </div>
@@ -346,42 +373,42 @@
         <p class="eyebrow mb-1" id="resultVerdict">Test tamamlandı</p>
         <h2 id="resultTopic" class="text-2xl font-bold mb-7"></h2>
 
-        <div class="card p-8">
+        <div class="card p-6">
           <div class="relative w-full grid place-items-center">
-            <svg viewBox="0 0 220 220" class="w-[260px] h-[260px]">
+            <svg viewBox="0 0 220 220" class="w-[200px] h-[200px]">
               <path d="M48.7 171.3 A86 86 0 1 1 171.3 171.3" fill="none" stroke="var(--line)" stroke-width="15" stroke-linecap="round"/>
               <path id="resultArc" d="M48.7 171.3 A86 86 0 1 1 171.3 171.3" fill="none" stroke="var(--accent)" stroke-width="15" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" class="gauge-val"/>
               <g id="resultTicks"></g>
             </svg>
-            <div class="absolute inset-0 grid place-items-center" style="top:8px">
+            <div class="absolute inset-0 grid place-items-center" style="top:6px">
               <div class="text-center">
-                <div id="resultPercent" class="disp text-[58px] font-bold leading-none tabnum">0<span class="text-[26px] muted">%</span></div>
+                <div id="resultPercent" class="disp text-[44px] font-bold leading-none tabnum">0<span class="text-[20px] muted">%</span></div>
                 <div class="eyebrow mt-1">Başarı</div>
               </div>
             </div>
           </div>
 
-          <div class="grid grid-cols-3 gap-3 mt-4">
-            <div class="rounded-[14px] p-3" style="background:var(--good-soft)"><div id="resultCorrect" class="disp text-2xl font-bold tabnum" style="color:var(--good)">0</div><div class="text-[12px] muted">doğru</div></div>
-            <div class="rounded-[14px] p-3" style="background:var(--bad-soft)"><div id="resultWrong" class="disp text-2xl font-bold tabnum" style="color:var(--bad)">0</div><div class="text-[12px] muted">yanlış</div></div>
-            <div class="rounded-[14px] p-3" style="background:var(--surface-2)"><div id="resultScore" class="disp text-2xl font-bold tabnum">0</div><div class="text-[12px] muted">puan</div></div>
+          <div class="grid grid-cols-3 gap-2.5 mt-4">
+            <div class="rounded-[11px] p-2.5" style="background:var(--good-soft)"><div id="resultCorrect" class="disp text-xl font-bold tabnum" style="color:var(--good)">0</div><div class="text-[12px] muted">doğru</div></div>
+            <div class="rounded-[11px] p-2.5" style="background:var(--bad-soft)"><div id="resultWrong" class="disp text-xl font-bold tabnum" style="color:var(--bad)">0</div><div class="text-[12px] muted">yanlış</div></div>
+            <div class="rounded-[11px] p-2.5" style="background:var(--surface-2)"><div id="resultScore" class="disp text-xl font-bold tabnum">0</div><div class="text-[12px] muted">puan</div></div>
           </div>
           <div class="mt-3 text-sm muted tabnum">Süre: <span id="resultTime">00:00</span></div>
         </div>
 
-        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <div class="mt-5 flex flex-col sm:flex-row gap-3">
           <button onclick="retryQuiz()" class="btn btn-primary btn-lg flex-1">Tekrar Çöz</button>
-          <button onclick="go('topics')" class="btn btn-ghost btn-lg flex-1">Başka Konu</button>
+          <button onclick="backToTopic()" class="btn btn-ghost btn-lg flex-1">Konuya Dön</button>
         </div>
       </div>
     </section>
 
     <!-- ===================== İSTATİSTİK ===================== -->
     <section id="page-stats" class="page hidden">
-      <div class="flex items-end justify-between mb-7">
+      <div class="flex items-end justify-between mb-6">
         <div>
-          <p class="eyebrow mb-2">Bu Cihaz</p>
-          <h2 class="text-3xl font-bold">İstatistiklerim</h2>
+          <p class="eyebrow mb-1.5">Bu Cihaz</p>
+          <h2 class="text-2xl font-bold">İstatistiklerim</h2>
         </div>
         <button id="resetBtn" onclick="resetStats()" class="text-sm muted hover:text-[var(--bad)] transition hidden">Sıfırla</button>
       </div>
@@ -397,10 +424,10 @@
 
       <div id="statsContent" class="hidden">
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-          <div class="card p-5"><div id="sTests" class="disp text-3xl font-bold tabnum">0</div><div class="text-[12px] muted mt-1">çözülen test</div></div>
-          <div class="card p-5"><div id="sPoints" class="disp text-3xl font-bold tabnum" style="color:var(--accent)">0</div><div class="text-[12px] muted mt-1">toplam puan</div></div>
-          <div class="card p-5"><div id="sAvg" class="disp text-3xl font-bold tabnum" style="color:var(--good)">0%</div><div class="text-[12px] muted mt-1">ortalama</div></div>
-          <div class="card p-5"><div id="sBest" class="font-semibold text-[15px] truncate leading-tight pt-1">—</div><div class="text-[12px] muted mt-1">en iyi konu</div></div>
+          <div class="card p-4"><div id="sTests" class="disp text-2xl font-bold tabnum">0</div><div class="text-[12px] muted mt-1">çözülen test</div></div>
+          <div class="card p-4"><div id="sPoints" class="disp text-2xl font-bold tabnum" style="color:var(--accent)">0</div><div class="text-[12px] muted mt-1">toplam puan</div></div>
+          <div class="card p-4"><div id="sAvg" class="disp text-2xl font-bold tabnum" style="color:var(--good)">0%</div><div class="text-[12px] muted mt-1">ortalama</div></div>
+          <div class="card p-4"><div id="sBest" class="font-semibold text-[15px] truncate leading-tight pt-1">—</div><div class="text-[12px] muted mt-1">en iyi konu</div></div>
         </div>
 
         <h3 class="font-semibold mb-4">Konu başına başarı</h3>
@@ -412,15 +439,16 @@
     </section>
   </main>
 
-  <!-- ===================== MOBİL ALT MENÜ ===================== -->
-  <nav class="sm:hidden fixed bottom-0 inset-x-0 z-40 grid grid-cols-3 h-[64px] backdrop-blur-xl"
-       style="background:color-mix(in srgb,var(--bg) 94%, transparent); border-top:1px solid var(--line); padding-bottom:env(safe-area-inset-bottom);">
-    <button data-nav="home"   onclick="go('home')"   class="tabbtn flex flex-col items-center justify-center gap-1 text-[11px] font-medium muted">
-      <svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Ana Sayfa</button>
-    <button data-nav="topics" onclick="go('topics')" class="tabbtn flex flex-col items-center justify-center gap-1 text-[11px] font-medium muted">
-      <svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>Konular</button>
-    <button data-nav="stats"  onclick="go('stats')"  class="tabbtn flex flex-col items-center justify-center gap-1 text-[11px] font-medium muted">
-      <svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>İstatistik</button>
+  <!-- ===================== MOBİL ALT MENÜ (sabit, yüzen) ===================== -->
+  <nav class="sm:hidden fixed bottom-0 inset-x-0 z-40" style="padding:8px 16px calc(8px + env(safe-area-inset-bottom));pointer-events:none;">
+    <div class="mx-auto grid grid-cols-3 rounded-[16px] overflow-hidden" style="max-width:300px;background:var(--surface);border:1px solid var(--line);box-shadow:0 10px 28px -12px rgba(12,17,24,.32);pointer-events:auto;">
+      <button data-nav="home"   onclick="go('home')"   class="tabbtn flex flex-col items-center justify-center gap-0.5 py-2.5 text-[10.5px] font-medium muted">
+        <svg class="w-[20px] h-[20px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Ana Sayfa</button>
+      <button data-nav="topics" onclick="go('topics')" class="tabbtn flex flex-col items-center justify-center gap-0.5 py-2.5 text-[10.5px] font-medium muted">
+        <svg class="w-[20px] h-[20px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>Konular</button>
+      <button data-nav="stats"  onclick="go('stats')"  class="tabbtn flex flex-col items-center justify-center gap-0.5 py-2.5 text-[10.5px] font-medium muted">
+        <svg class="w-[20px] h-[20px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>İstatistik</button>
+    </div>
   </nav>
 
   <script>
@@ -451,7 +479,7 @@
      2) DURUM + KÜÇÜK YARDIMCILAR
      ===================================================================== */
   const cache = {};                 // yüklenen JSON'lar bellekte tutulur
-  const S = { topic:null, qs:[], i:0, correct:0, wrong:0, answered:false, t0:0, timer:null };
+  const S = { topic:null, testIndex:0, testLabel:'', qs:[], i:0, correct:0, wrong:0, answered:false, t0:0, timer:null };
   const $ = id => document.getElementById(id);
 
   function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){const j=(Math.random()*(i+1))|0; [a[i],a[j]]=[a[j],a[i]];} return a; }
@@ -461,13 +489,14 @@
   /* =====================================================================
      3) SAYFA YÖNETİMİ
      ===================================================================== */
-  const PAGES=['home','topics','quiz','result','stats'];
+  const PAGES=['home','topics','detail','quiz','result','stats'];
   function go(name){
     PAGES.forEach(p=>$('page-'+p).classList.toggle('hidden',p!==name));
     // quiz tam ekran, body scroll kilitle
     document.body.style.overflow = name==='quiz' ? 'hidden' : '';
+    const navName = name==='detail' ? 'topics' : name; // detay sayfasında "Konular" aktif kalsın
     document.querySelectorAll('[data-nav]').forEach(b=>{
-      const on=b.dataset.nav===name;
+      const on=b.dataset.nav===navName;
       b.classList.toggle('active',on);
       if(b.classList.contains('tabbtn')) b.style.color=on?'var(--accent)':'';
     });
@@ -503,16 +532,29 @@
     if(t.mix){ let n=0; TOPICS.forEach(x=>{ if(!x.mix&&cache[x.id]) n+=cache[x.id].questions.length; }); return Math.min(n,20); }
     return cache[t.id]?cache[t.id].questions.length:null;
   }
-  async function buildQuestions(t){
-    if(t.mix){
-      let pool=[]; TOPICS.filter(x=>!x.mix).forEach(x=>{ if(cache[x.id]) pool=pool.concat(cache[x.id].questions); });
-      if(!pool.length){ await prefetchAll(); TOPICS.filter(x=>!x.mix).forEach(x=>{ if(cache[x.id]) pool=pool.concat(cache[x.id].questions); }); }
-      if(!pool.length) throw new Error('boş');
-      return shuffle(pool).slice(0,20);
-    }
-    const d=await fetchTopic(t.id);
-    if(!d.questions||!d.questions.length) throw new Error('boş');
-    return d.questions;
+
+  /* Bir konunun sorularını dengeli birden fazla teste böler (≈7 soruluk gruplar) */
+  const MIX_TESTS = 3, MIX_SIZE = 20;
+  function splitTests(qs){
+    const n=qs.length;
+    if(n<=8) return [qs];
+    const groups=Math.max(2, Math.round(n/7));
+    const per=Math.ceil(n/groups);
+    const out=[]; for(let i=0;i<n;i+=per) out.push(qs.slice(i,i+per));
+    return out;
+  }
+  /* Konu bazında kaç test var (kart rozeti için) */
+  function testCount(t){
+    if(t.mix) return MIX_TESTS;
+    return cache[t.id] ? splitTests(cache[t.id].questions).length : null;
+  }
+  /* Genel deneme: tüm konulardan karışık MIX_SIZE soru */
+  async function buildMixSet(){
+    const real=TOPICS.filter(x=>!x.mix);
+    let pool=[]; real.forEach(x=>{ if(cache[x.id]) pool=pool.concat(cache[x.id].questions); });
+    if(!pool.length){ await prefetchAll(); real.forEach(x=>{ if(cache[x.id]) pool=pool.concat(cache[x.id].questions); }); }
+    if(!pool.length) throw new Error('boş');
+    return shuffle(pool).slice(0,MIX_SIZE);
   }
 
   /* =====================================================================
@@ -520,34 +562,112 @@
      ===================================================================== */
   function renderTopics(){
     $('topicGrid').innerHTML = TOPICS.map(t=>{
-      const c=topicCount(t);
-      const badge = c==null ? '' : `<span class="text-[12px] muted tabnum">${c} soru</span>`;
-      return `<button onclick="startQuiz('${t.id}')" class="topic-card card p-5 text-left flex items-center gap-4">
-        <span class="chip"><svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">${t.icon}</svg></span>
+      const tc=testCount(t);
+      const badge = tc==null ? '' : `<span class="text-[12px] muted tabnum">${tc} test</span>`;
+      return `<button onclick="openTopic('${t.id}')" class="topic-card card p-4 text-left flex items-center gap-3.5">
+        <span class="chip"><svg class="w-[20px] h-[20px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">${t.icon}</svg></span>
         <span class="min-w-0 flex-1">
-          <span class="block disp font-semibold text-[17px] leading-tight">${t.name}</span>
-          <span class="block text-[13px] muted mt-0.5 truncate">${t.desc}</span>
+          <span class="block disp font-semibold text-[15.5px] leading-tight">${t.name}</span>
+          <span class="block text-[12.5px] muted mt-0.5 truncate">${t.desc}</span>
         </span>
         <span class="flex flex-col items-end gap-1 shrink-0">
           ${badge}
-          <svg class="w-5 h-5 faint" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          <svg class="w-[18px] h-[18px] faint" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
         </span>
       </button>`;
     }).join('');
   }
 
   /* =====================================================================
+     6b) KONU DETAY — konu anlatımı + testler
+     ===================================================================== */
+  async function openTopic(id){
+    const t=TOPICS.find(x=>x.id===id); if(!t) return;
+    go('detail');
+    renderDetail(id);                       // önbellek hazırsa hemen çiz
+    if(!t.mix && !cache[id]){               // değilse yükleyip tazele
+      try{ await fetchTopic(id); }catch(e){}
+      renderDetail(id);
+    }
+  }
+
+  function renderDetail(id){
+    const t=TOPICS.find(x=>x.id===id); if(!t) return;
+    S.detailId=id;
+    $('detailIcon').innerHTML=`<svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">${t.icon}</svg>`;
+    $('detailTitle').textContent=t.name;
+    $('detailDesc').textContent=t.desc;
+
+    const d = t.mix ? null : cache[id];
+    const hasLesson = !!(d && Array.isArray(d.lesson) && d.lesson.length);
+
+    // Konu anlatımı
+    $('tabLesson').classList.toggle('hidden', !hasLesson);
+    $('detailLesson').innerHTML = hasLesson ? d.lesson.map(lessonCard).join('') : '';
+
+    // Testler
+    let cards;
+    if(t.mix){
+      cards = Array.from({length:MIX_TESTS},(_,i)=>testCard(id,i,'Deneme '+(i+1), MIX_SIZE+' karışık soru'));
+    } else if(d && d.questions){
+      cards = splitTests(d.questions).map((q,i)=>testCard(id,i,'Test '+(i+1), q.length+' soru'));
+    } else {
+      cards = ['<p class="muted text-sm col-span-full">Testler yükleniyor…</p>'];
+    }
+    $('detailTests').innerHTML = cards.join('');
+
+    detailTab(hasLesson ? 'lesson' : 'tests');
+  }
+
+  function lessonCard(s){
+    const p = s.p ? `<p class="muted text-[14px] leading-relaxed mt-1.5">${s.p}</p>` : '';
+    const list = s.list ? `<ul class="mt-2 space-y-1.5">${s.list.map(li=>
+      `<li class="flex gap-2 text-[14px] leading-relaxed"><span style="color:var(--accent)" class="mt-px shrink-0">•</span><span>${li}</span></li>`).join('')}</ul>` : '';
+    return `<div class="card p-4 sm:p-5"><h3 class="font-semibold text-[15px] disp">${s.h}</h3>${p}${list}</div>`;
+  }
+
+  function testCard(id,i,title,sub){
+    return `<button onclick="startTest('${id}',${i})" class="topic-card card p-4 text-left flex items-center gap-3.5">
+      <span class="grid place-items-center w-9 h-9 rounded-[10px] disp font-bold text-sm tabnum shrink-0" style="background:var(--surface-2);border:1px solid var(--line);color:var(--accent)">${i+1}</span>
+      <span class="min-w-0 flex-1">
+        <span class="block disp font-semibold text-[15px] leading-tight">${title}</span>
+        <span class="block text-[12.5px] muted mt-0.5">${sub}</span>
+      </span>
+      <svg class="w-[18px] h-[18px] faint shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </button>`;
+  }
+
+  function detailTab(which){
+    const onL = which==='lesson';
+    $('detailLesson').classList.toggle('hidden',!onL);
+    $('detailTests').classList.toggle('hidden',onL);
+    $('tabLesson').classList.toggle('dtab--on',onL);
+    $('tabTests').classList.toggle('dtab--on',!onL);
+  }
+
+  /* =====================================================================
      7) QUIZ AKIŞI
      ===================================================================== */
-  async function startQuiz(id){
+  async function startTest(id, idx){
     const t=TOPICS.find(x=>x.id===id); if(!t) return;
-    S.topic=t; go('quiz');
-    $('quizTopicName').textContent=t.name;
+    S.topic=t; S.testIndex=idx;
+    S.testLabel = t.mix ? ('Deneme '+(idx+1)) : ('Test '+(idx+1));
+    go('quiz');
+    $('quizTopicName').textContent=t.name+' · '+S.testLabel;
     $('quizQuestion').textContent='Sorular yükleniyor…';
     $('quizOptions').innerHTML=''; $('quizExplain').classList.add('hidden');
     $('segs').innerHTML=''; $('quizNext').classList.add('hidden');
     try{
-      S.qs=await buildQuestions(t); S.i=0; S.correct=0; S.wrong=0; S.t0=Date.now();
+      let qs;
+      if(t.mix){
+        qs = await buildMixSet();
+      }else{
+        const d=await fetchTopic(t.id);
+        if(!d.questions||!d.questions.length) throw new Error('boş');
+        const tests=splitTests(d.questions);
+        qs = tests[idx] || tests[0];
+      }
+      S.qs=qs; S.i=0; S.correct=0; S.wrong=0; S.t0=Date.now();
       $('segs').innerHTML=S.qs.map(()=>`<span class="seg"><i></i></span>`).join('');
       $('quizNext').classList.remove('hidden');
       startTimer(); renderQuestion();
@@ -556,7 +676,7 @@
       $('quizQuestion').innerHTML='<span style="color:var(--bad)">Sorular yüklenemedi.</span>';
       $('quizOptions').innerHTML=`<p class="muted text-sm leading-relaxed">
         <code>${t.mix?'*.json':t.id+'.json'}</code> dosyasına ulaşılamadı. Site bir web sunucusunda (GitHub Pages gibi) açılmalı; dosyaya çift tıklayıp <code>file://</code> ile açmak çalışmaz.</p>
-        <button onclick="go('topics')" class="btn btn-primary mt-4">Konulara dön</button>`;
+        <button onclick="backToTopic()" class="btn btn-primary mt-4">Geri dön</button>`;
       stopTimer();
     }
   }
@@ -596,8 +716,9 @@
   }
 
   function nextQuestion(){ if(S.i<S.qs.length-1){ S.i++; renderQuestion(); } else finishQuiz(); }
-  function quitQuiz(){ if(confirm('Testten çıkılsın mı? İlerlemen kaybolur.')){ stopTimer(); document.body.style.overflow=''; go('topics'); } }
-  function retryQuiz(){ if(S.topic) startQuiz(S.topic.id); }
+  function quitQuiz(){ if(confirm('Testten çıkılsın mı? İlerlemen kaybolur.')){ stopTimer(); document.body.style.overflow=''; backToTopic(); } }
+  function retryQuiz(){ if(S.topic) startTest(S.topic.id, S.testIndex||0); }
+  function backToTopic(){ if(S.topic) openTopic(S.topic.id); else go('topics'); }
 
   function startTimer(){ stopTimer(); $('quizTimer').textContent='00:00';
     S.timer=setInterval(()=>{ $('quizTimer').textContent=fmt(((Date.now()-S.t0)/1000)|0); },1000); }
@@ -616,7 +737,7 @@
   function finishQuiz(){ document.body.style.overflow='';
     stopTimer();
     const n=S.qs.length, pct=n?Math.round(S.correct/n*100):0, score=S.correct*POINTS, dur=((Date.now()-S.t0)/1000)|0;
-    saveResult({topic_id:S.topic.id, topic_name:S.topic.name, score, correct:S.correct, wrong:S.wrong, total:n, dur, at:new Date().toISOString()});
+    saveResult({topic_id:S.topic.id, topic_name:S.topic.name, test:S.testLabel||'', score, correct:S.correct, wrong:S.wrong, total:n, dur, at:new Date().toISOString()});
 
     $('resultTopic').textContent=S.topic.name;
     $('resultVerdict').textContent = pct>=80?'Mükemmel iş':pct>=50?'İyi gidiyor':'Biraz daha çalış';
@@ -664,11 +785,11 @@
     $('recentList').innerHTML=rs.slice(0,6).map(r=>{
       const p=Math.round(r.correct/r.total*100);
       const col=p>=70?'var(--good)':p>=40?'var(--warn)':'var(--bad)';
-      return `<div class="card !shadow-none p-3.5 flex items-center gap-3.5">
-        <span class="grid place-items-center w-11 h-11 rounded-xl disp font-bold text-sm tabnum" style="background:var(--surface-2);color:${col}">${p}%</span>
-        <span class="min-w-0 flex-1"><span class="block font-semibold text-[15px] truncate">${r.topic_name}</span>
+      return `<div class="card !shadow-none p-3 flex items-center gap-3">
+        <span class="grid place-items-center w-10 h-10 rounded-[10px] disp font-bold text-[13px] tabnum shrink-0" style="background:var(--surface-2);color:${col}">${p}%</span>
+        <span class="min-w-0 flex-1"><span class="block font-semibold text-[14.5px] truncate">${r.topic_name}${r.test?` <span class="muted font-normal">· ${r.test}</span>`:''}</span>
           <span class="block text-[12px] muted tabnum">${r.correct}/${r.total} doğru · ${fmt(r.dur)} · ${ago(r.at)}</span></span>
-        <span class="disp font-bold tabnum" style="color:var(--accent)">${r.score}<span class="text-[11px] muted">p</span></span>
+        <span class="disp font-bold tabnum shrink-0" style="color:var(--accent)">${r.score}<span class="text-[11px] muted">p</span></span>
       </div>`;
     }).join('');
   }
