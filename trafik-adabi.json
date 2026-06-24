@@ -1,49 +1,20 @@
 {
   "id": "trafik-adabi",
   "title": "Trafik Adabı",
-  "description": "Sürücü davranışları ve trafikte nezaket",
+  "description": "Sürücü davranışları, nezaket ve güvenlik",
   "questions": [
-    {
-      "id": 1,
-      "question": "Trafikte 'yol verme' davranışının temel amacı nedir?",
-      "options": ["Daha hızlı gitmek", "Güvenliği ve düzeni sağlamak", "Korna çalmak", "Park etmek"],
-      "answer": 1,
-      "explanation": "Yol verme, çatışmaları önleyerek trafik akışını güvenli ve düzenli hale getirir."
-    },
-    {
-      "id": 2,
-      "question": "Öfkeli ve agresif sürücülük (yol öfkesi) trafikte neye yol açar?",
-      "options": ["Kaza riskini azaltır", "Kaza ve gerginlik riskini artırır", "Yakıt tasarrufu sağlar", "Hiçbir etkisi yoktur"],
-      "answer": 1,
-      "explanation": "Agresif sürüş, hatalı kararlar ve kaza riskini ciddi biçimde artırır; sakin sürüş güvenlidir."
-    },
-    {
-      "id": 3,
-      "question": "Yaya geçidine yaklaşan sürücü ne yapmalıdır?",
-      "options": ["Hızlanmalı", "Yayalara yol vermeli ve gerekirse durmalı", "Korna çalmalı", "Far yakmalı"],
-      "answer": 1,
-      "explanation": "Yaya geçidinde öncelik yayanındır; sürücü yavaşlar ve gerektiğinde tamamen durur."
-    },
-    {
-      "id": 4,
-      "question": "Gereksiz korna kullanımı trafik adabı açısından nasıl değerlendirilir?",
-      "options": ["Saygılı bir davranıştır", "Rahatsız edici ve uygunsuz bir davranıştır", "Zorunludur", "Hız kazandırır"],
-      "answer": 1,
-      "explanation": "Korna yalnızca tehlikeyi haber vermek için kullanılır; gereksiz kullanım çevreyi rahatsız eder."
-    },
-    {
-      "id": 5,
-      "question": "Ambulans, itfaiye gibi geçiş üstünlüğü olan araçlar sirenle yaklaştığında ne yapılır?",
-      "options": ["Hızlanıp önde gitmek", "Yol açıp kenara çekilmek", "Durup yolu kapatmak", "Takip etmek"],
-      "answer": 1,
-      "explanation": "Geçiş üstünlüğüne sahip araçlara derhal yol verilir; sürücü uygun şekilde kenara çekilir."
-    },
-    {
-      "id": 6,
-      "question": "Trafikte yapılan küçük bir hatada doğru davranış hangisidir?",
-      "options": ["Bağırıp tartışmak", "Sakin kalıp el/işaretle özür dileyebilmek", "Aracı takip etmek", "Korna çalmak"],
-      "answer": 1,
-      "explanation": "Hoşgörü ve sakinlik trafik adabının temelidir; gerginliği büyütmemek güvenliği artırır."
-    }
+    { "id":1, "question":"Trafikte 'yol verme' davranışının temel amacı nedir?", "options":["Daha hızlı gitmek","Güvenliği ve düzeni sağlamak","Korna çalmak","Park etmek"], "answer":1, "explanation":"Yol verme, çatışmaları önleyerek trafiği güvenli ve düzenli hale getirir." },
+    { "id":2, "question":"Sirenle yaklaşan ambulans, itfaiye gibi geçiş üstünlüğü olan araçlara ne yapılır?", "options":["Önünde gitmek","Yol açıp uygun şekilde kenara çekilmek","Durup yolu kapatmak","Takip etmek"], "answer":1, "explanation":"Geçiş üstünlüğüne sahip araçlara derhal yol verilir; sürücü güvenle kenara çekilir." },
+    { "id":3, "question":"Öfkeli ve agresif sürücülük (yol öfkesi) trafikte neye yol açar?", "options":["Kaza riskini azaltır","Kaza ve gerginlik riskini artırır","Yakıt tasarrufu sağlar","Hiçbir etkisi yoktur"], "answer":1, "explanation":"Agresif sürüş hatalı kararları ve kaza riskini ciddi biçimde artırır." },
+    { "id":4, "question":"Gereksiz korna kullanımı trafik adabı açısından nasıl değerlendirilir?", "options":["Saygılı bir davranış","Rahatsız edici ve uygunsuz bir davranış","Zorunlu","Hız kazandırır"], "answer":1, "explanation":"Korna yalnızca tehlikeyi haber vermek için kullanılır; gereksiz kullanım çevreyi rahatsız eder." },
+    { "id":5, "question":"Yaya geçidine yaklaşan sürücü nasıl davranmalıdır?", "options":["Hızlanmalı","Yavaşlayıp yayalara yol vermeli, gerekirse durmalı","Korna çalmalı","Far yakmalı"], "answer":1, "explanation":"Yaya geçidinde öncelik yayanındır; sürücü yavaşlar ve gerektiğinde tamamen durur." },
+    { "id":6, "question":"Şerit değiştirmeden önce yapılması gereken nedir?", "options":["Doğrudan geçmek","Sinyal verip aynalardan ve kör noktadan kontrol etmek","Korna çalmak","Hızlanmak"], "answer":1, "explanation":"Şerit değişiminde sinyal verilir, aynalar ve kör nokta kontrol edilerek güvenli geçiş yapılır." },
+    { "id":7, "question":"Sık şerit değiştirip araç arasında 'makas atmak' nasıl bir davranıştır?", "options":["Becerikli sürücülük","Tehlikeli ve kaza riskini artıran kuraldışı davranış","Yakıt tasarrufu","Zorunlu"], "answer":1, "explanation":"Makas atmak ani manevralarla kaza riskini büyük ölçüde artıran tehlikeli bir davranıştır." },
+    { "id":8, "question":"Otoyolda emniyet (banket) şeridinin amacı nedir?", "options":["Daha hızlı ilerlemek","Arıza ve acil durumlar ile acil araç geçişi","Park etmek","Sollamak"], "answer":1, "explanation":"Emniyet şeridi yalnızca arıza/acil durum ve acil araçların geçişi içindir; sürüş için kullanılmaz." },
+    { "id":9, "question":"Trafikte yapılan küçük bir hatada en uygun davranış hangisidir?", "options":["Bağırıp tartışmak","Sakin kalıp el işaretiyle özür dileyebilmek","Aracı takip etmek","Korna çalmak"], "answer":1, "explanation":"Hoşgörü ve sakinlik trafik adabının temelidir; gerginliği büyütmemek güvenliği artırır." },
+    { "id":10, "question":"Gece şehir dışında karşıdan araç gelirken farlarla ilgili doğru davranış nedir?", "options":["Uzunları açık tutmak","Uzun farı kısa (yakın) konuma almak","Farları kapatmak","Sinyal vermek"], "answer":1, "explanation":"Karşı sürücüyü kör etmemek için uzun farlar kısa (yakın) konuma alınır." },
+    { "id":11, "question":"Engellilere ayrılmış park yerine park etmek nasıl bir davranıştır?", "options":["Uygun","Hem kural ihlali hem saygısızlık","Zorunlu","Serbest"], "answer":1, "explanation":"Bu alanlar engelli sürücüler içindir; izinsiz kullanmak hem kuraldışı hem saygısızdır." },
+    { "id":12, "question":"Direksiyon başında cep telefonu ile konuşmak ne gibi bir etki yapar?", "options":["Dikkati artırır","Dikkati dağıtıp tepki süresini uzatır","Etkisizdir","Yakıt tasarrufu"], "answer":1, "explanation":"Telefon kullanımı dikkati dağıtır, tepki süresini uzatır ve kaza riskini artırır." },
+    { "id":13, "question":"Trafikte sabırlı ve hoşgörülü olmanın katkısı nedir?", "options":["Trafiği yavaşlatır","Kazaları ve stresi azaltıp akışı kolaylaştırır","Etkisizdir","Yakıt harcar"], "answer":1, "explanation":"Sabır ve hoşgörü, gerginliği ve kaza riskini azaltarak trafik akışını rahatlatır." }
   ]
 }
