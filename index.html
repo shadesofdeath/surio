@@ -7,195 +7,229 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- ===== SIDEBAR (Desktop) ===== -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-logo">
-      <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="32" height="32" rx="8" fill="#2563EB"/>
-        <path d="M7 21 C7 21 10 17 16 17 C22 17 25 21 25 21" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="11" cy="22" r="2.5" fill="white"/>
-        <circle cx="21" cy="22" r="2.5" fill="white"/>
-        <path d="M10 17 L12 11 L20 11 L22 17" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-        <path d="M12 11 L13.5 8 H18.5 L20 11" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
-      </svg>
-      <span class="logo-text">Sürio</span>
-    </div>
+<!-- ═══════════════════════════════════════════
+     SIDEBAR
+════════════════════════════════════════════ -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <svg class="logo-icon" viewBox="0 0 30 30" fill="none">
+      <rect width="30" height="30" rx="7" fill="#3B6FF0"/>
+      <path d="M6 20.5 C8 17.5 11.5 16 15 16 C18.5 16 22 17.5 24 20.5" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="10.5" cy="21.5" r="2.2" fill="white"/>
+      <circle cx="19.5" cy="21.5" r="2.2" fill="white"/>
+      <path d="M10 16 L11.8 10.5 H18.2 L20 16" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M12.2 10.5 L13.5 7.5 H16.5 L17.8 10.5" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    <span class="logo-text">Sürio</span>
+  </div>
 
-    <nav class="sidebar-nav">
-      <button class="nav-item active" data-view="home">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/>
-        </svg>
-        Ana Sayfa
-      </button>
-      <button class="nav-item" data-view="topics">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
-        </svg>
-        Konular
-      </button>
-      <button class="nav-item" data-view="stats">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
-        </svg>
-        İstatistikler
-      </button>
-    </nav>
+  <div class="sidebar-section-label">Menü</div>
 
-    <div class="sidebar-footer">
-      <div class="version-badge">v0.1 Beta</div>
-    </div>
-  </aside>
-
-  <!-- ===== MAIN CONTENT ===== -->
-  <main class="main-content" id="mainContent">
-
-    <!-- HOME VIEW -->
-    <section class="view" id="view-home">
-      <div class="page-header">
-        <h1 class="page-title">Hoş geldin 👋</h1>
-        <p class="page-subtitle">Ehliyet sınavına hazırlanmaya başla. Konuları seç, testleri çöz.</p>
-      </div>
-
-      <div class="stats-row">
-        <div class="stat-card">
-          <span class="stat-value" id="stat-total-solved">0</span>
-          <span class="stat-label">Çözülen Soru</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-value accent" id="stat-accuracy">—</span>
-          <span class="stat-label">Doğruluk</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-value" id="stat-topics-done">0</span>
-          <span class="stat-label">Konu Tamamlandı</span>
-        </div>
-      </div>
-
-      <div class="section-title">Devam Et</div>
-      <div class="topic-grid" id="home-topics"></div>
-    </section>
-
-    <!-- TOPICS VIEW -->
-    <section class="view hidden" id="view-topics">
-      <div class="page-header">
-        <h1 class="page-title">Konular</h1>
-        <p class="page-subtitle">Çalışmak istediğin konuyu seç.</p>
-      </div>
-      <div class="topic-grid" id="all-topics"></div>
-    </section>
-
-    <!-- QUIZ VIEW -->
-    <section class="view hidden" id="view-quiz">
-      <div class="quiz-header">
-        <button class="btn-back" id="btnBack">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15,18 9,12 15,6"/>
-          </svg>
-          Geri
-        </button>
-        <div class="quiz-meta">
-          <span class="quiz-topic-label" id="quizTopicLabel"></span>
-          <span class="quiz-test-label" id="quizTestLabel"></span>
-        </div>
-      </div>
-
-      <div class="progress-bar-wrap">
-        <div class="progress-bar-track">
-          <div class="progress-bar-fill" id="progressBar"></div>
-        </div>
-        <span class="progress-text" id="progressText">0 / 0</span>
-      </div>
-
-      <div class="question-card" id="questionCard">
-        <div class="question-number" id="questionNumber"></div>
-        <div class="question-text" id="questionText"></div>
-        <ul class="options-list" id="optionsList"></ul>
-        <div class="question-feedback hidden" id="questionFeedback"></div>
-        <button class="btn-next hidden" id="btnNext">Sonraki Soru →</button>
-      </div>
-    </section>
-
-    <!-- RESULT VIEW -->
-    <section class="view hidden" id="view-result">
-      <div class="result-card">
-        <div class="result-icon" id="resultIcon"></div>
-        <h2 class="result-title" id="resultTitle"></h2>
-        <p class="result-sub" id="resultSub"></p>
-        <div class="result-stats">
-          <div class="result-stat">
-            <span class="result-stat-val green" id="resCorrect">0</span>
-            <span class="result-stat-lbl">Doğru</span>
-          </div>
-          <div class="result-stat">
-            <span class="result-stat-val red" id="resWrong">0</span>
-            <span class="result-stat-lbl">Yanlış</span>
-          </div>
-          <div class="result-stat">
-            <span class="result-stat-val" id="resScore">%0</span>
-            <span class="result-stat-lbl">Başarı</span>
-          </div>
-        </div>
-        <div class="result-actions">
-          <button class="btn-primary" id="btnRetry">Tekrar Çöz</button>
-          <button class="btn-secondary" id="btnBackToTopic">Konulara Dön</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- STATS VIEW -->
-    <section class="view hidden" id="view-stats">
-      <div class="page-header">
-        <h1 class="page-title">İstatistikler</h1>
-        <p class="page-subtitle">Performansını takip et.</p>
-      </div>
-      <div class="stats-detail" id="statsDetail"></div>
-    </section>
-
-    <!-- TEST SELECT MODAL -->
-    <div class="modal-overlay hidden" id="testSelectModal">
-      <div class="modal">
-        <div class="modal-header">
-          <h3 class="modal-title" id="modalTopicTitle"></h3>
-          <button class="modal-close" id="modalClose">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-          </button>
-        </div>
-        <p class="modal-sub">Test seç:</p>
-        <div class="test-list" id="testList"></div>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- ===== BOTTOM TAB BAR (Mobile) ===== -->
-  <nav class="bottom-tab" id="bottomTab">
-    <button class="tab-item active" data-view="home">
+  <nav class="sidebar-nav">
+    <button class="nav-item active" data-view="home">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/>
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+        <polyline points="9,22 9,12 15,12 15,22"/>
       </svg>
       Ana Sayfa
     </button>
-    <button class="tab-item" data-view="topics">
+    <button class="nav-item" data-view="topics">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
+        <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/>
+        <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
       </svg>
       Konular
     </button>
-    <button class="tab-item" data-view="stats">
+    <button class="nav-item" data-view="stats">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+        <line x1="18" y1="20" x2="18" y2="10"/>
+        <line x1="12" y1="20" x2="12" y2="4"/>
+        <line x1="6" y1="20" x2="6" y2="14"/>
       </svg>
       İstatistikler
     </button>
   </nav>
 
-  <script src="index.js"></script>
+  <div class="sidebar-footer">
+    <span class="version-badge">Sürio v0.1 Beta</span>
+  </div>
+</aside>
+
+<!-- ═══════════════════════════════════════════
+     MAIN
+════════════════════════════════════════════ -->
+<main class="main-content" id="mainContent">
+
+  <!-- ── HOME ── -->
+  <section class="view" id="view-home">
+    <div class="page-header">
+      <h1 class="page-title">Hoş geldin 👋</h1>
+      <p class="page-subtitle">Ehliyet sınavına hazırlanmaya başla. Konuları seç, testleri çöz.</p>
+    </div>
+
+    <div class="hero-strip">
+      <div class="hero-stat">
+        <span class="hero-stat-value" id="stat-solved">0</span>
+        <span class="hero-stat-label">Çözülen Soru</span>
+        <div class="hero-stat-icon blue">📝</div>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value is-accent" id="stat-accuracy">—</span>
+        <span class="hero-stat-label">Doğruluk Oranı</span>
+        <div class="hero-stat-icon amber">🎯</div>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value is-green" id="stat-done">0</span>
+        <span class="hero-stat-label">Tamamlanan Test</span>
+        <div class="hero-stat-icon green">✅</div>
+      </div>
+    </div>
+
+    <div class="section-label">Konular</div>
+    <div class="topic-grid" id="home-topics"></div>
+  </section>
+
+  <!-- ── TOPICS ── -->
+  <section class="view hidden" id="view-topics">
+    <div class="page-header">
+      <h1 class="page-title">Konular</h1>
+      <p class="page-subtitle">Çalışmak istediğin konuyu seç.</p>
+    </div>
+    <div class="topic-grid" id="all-topics"></div>
+  </section>
+
+  <!-- ── QUIZ ── -->
+  <section class="view hidden" id="view-quiz">
+    <div class="quiz-topbar">
+      <div class="quiz-breadcrumb">
+        <span class="quiz-breadcrumb-topic" id="quizTopicLabel"></span>
+        <span class="quiz-breadcrumb-sep">/</span>
+        <span class="quiz-breadcrumb-test" id="quizTestLabel"></span>
+      </div>
+      <button class="btn-back" id="btnBack">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15,18 9,12 15,6"/>
+        </svg>
+        Çık
+      </button>
+    </div>
+
+    <div class="quiz-progress">
+      <div class="progress-track">
+        <div class="progress-fill" id="progressBar"></div>
+      </div>
+      <span class="progress-fraction" id="progressText">1 / 0</span>
+    </div>
+
+    <div class="question-card" id="questionCard">
+      <div class="question-card-header">
+        <span class="question-chip" id="questionNumber">Soru 1</span>
+      </div>
+      <div class="question-text" id="questionText"></div>
+      <ul class="options-list" id="optionsList"></ul>
+      <div class="question-feedback hidden" id="questionFeedback"></div>
+      <div class="question-card-footer">
+        <button class="btn-next hidden" id="btnNext">Sonraki Soru →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RESULT ── -->
+  <section class="view hidden" id="view-result">
+    <div class="result-wrap">
+      <div class="result-score-ring">
+        <div class="result-score-circle" id="resultCircle">
+          <span class="result-pct" id="resultPct">%0</span>
+          <span class="result-pct-label">Başarı</span>
+        </div>
+        <h2 class="result-title" id="resultTitle"></h2>
+        <p class="result-sub" id="resultSub"></p>
+      </div>
+
+      <div class="result-breakdown">
+        <div class="result-breakdown-row">
+          <span class="result-breakdown-label">Doğru cevap</span>
+          <span class="result-breakdown-val green" id="resCorrect">0</span>
+        </div>
+        <div class="result-breakdown-row">
+          <span class="result-breakdown-label">Yanlış cevap</span>
+          <span class="result-breakdown-val red" id="resWrong">0</span>
+        </div>
+        <div class="result-breakdown-row">
+          <span class="result-breakdown-label">Toplam soru</span>
+          <span class="result-breakdown-val" id="resTotal">0</span>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button class="btn-primary" id="btnRetry">Tekrar Çöz</button>
+        <button class="btn-secondary" id="btnBackToTopic">Konulara Dön</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS ── -->
+  <section class="view hidden" id="view-stats">
+    <div class="page-header">
+      <h1 class="page-title">İstatistikler</h1>
+      <p class="page-subtitle">Çözdüğün testlerin özeti.</p>
+    </div>
+    <div id="statsContent"></div>
+  </section>
+
+  <!-- ── TEST SELECT MODAL ── -->
+  <div class="modal-overlay hidden" id="testSelectModal">
+    <div class="modal">
+      <div class="modal-header">
+        <div style="display:flex;align-items:center;gap:6px;">
+          <span class="modal-topic-icon" id="modalTopicIcon"></span>
+          <span class="modal-title" id="modalTopicTitle"></span>
+        </div>
+        <button class="modal-close" id="modalClose">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="test-list" id="testList"></div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ═══════════════════════════════════════════
+     BOTTOM TAB
+════════════════════════════════════════════ -->
+<nav class="bottom-tab" id="bottomTab">
+  <button class="tab-item active" data-view="home">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+      <polyline points="9,22 9,12 15,12 15,22"/>
+    </svg>
+    Ana Sayfa
+  </button>
+  <button class="tab-item" data-view="topics">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/>
+      <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
+    </svg>
+    Konular
+  </button>
+  <button class="tab-item" data-view="stats">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="20" x2="18" y2="10"/>
+      <line x1="12" y1="20" x2="12" y2="4"/>
+      <line x1="6" y1="20" x2="6" y2="14"/>
+    </svg>
+    İstatistikler
+  </button>
+</nav>
+
+<script src="index.js"></script>
 </body>
 </html>
