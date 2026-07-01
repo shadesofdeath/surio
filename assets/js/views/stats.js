@@ -2,7 +2,17 @@
 
 import { getRegistry } from "../data.js";
 import { getTest, isRead, summary, reset } from "../store.js";
-import { render, errorState, loading, esc } from "../ui.js";
+import { PASS_SCORE, NEAR_SCORE } from "../config.js";
+import { icon } from "../icons.js";
+import { render, errorState, loading, emptyState, esc } from "../ui.js";
+
+function statCard(iconName, value, label) {
+  return `<div class="hero-stat">
+    <span class="hero-stat-ic">${icon(iconName)}</span>
+    <span class="hero-stat-value tnum">${value}</span>
+    <span class="hero-stat-label">${label}</span>
+  </div>`;
+}
 
 export async function statsView() {
   render(loading());
@@ -24,11 +34,16 @@ export async function statsView() {
       const best = t ? `%${t.best}` : "—";
       const last = t ? `%${t.last}` : "—";
       const attempts = t ? t.attempts : 0;
-      const scoreCls = t ? (t.best >= 70 ? "green" : t.best >= 50 ? "" : "red") : "";
+      const scoreCls = t
+        ? t.best >= PASS_SCORE ? "green" : t.best >= NEAR_SCORE ? "" : "red"
+        : "";
       return `<div class="stats-row">
-        <div>
-          <div class="stats-row-name">${sub.icon} ${esc(sub.title)}</div>
-          <div class="stats-row-sub">${read ? "Ders okundu" : "Ders okunmadı"} · ${attempts} deneme</div>
+        <div class="stats-row-main">
+          <span class="subject-ic sm" style="--c:${sub.color}">${icon(sub.icon)}</span>
+          <div>
+            <div class="stats-row-name">${esc(sub.title)}</div>
+            <div class="stats-row-sub">${read ? "Ders okundu" : "Ders okunmadı"} · ${attempts} deneme</div>
+          </div>
         </div>
         <div class="stats-cell score ${scoreCls}">${best}</div>
         <div class="stats-cell">${last}</div>
@@ -44,9 +59,9 @@ export async function statsView() {
     </div>
 
     <div class="hero-strip" style="margin-bottom:28px">
-      <div class="hero-stat"><span class="hero-stat-value tnum">${s.solved}</span><span class="hero-stat-label">Çözülen Soru</span><span class="hero-stat-icon">📝</span></div>
-      <div class="hero-stat"><span class="hero-stat-value tnum">${s.attempts}</span><span class="hero-stat-label">Toplam Deneme</span><span class="hero-stat-icon">🔁</span></div>
-      <div class="hero-stat"><span class="hero-stat-value tnum">${s.avgBest ? "%" + s.avgBest : "—"}</span><span class="hero-stat-label">Ortalama Başarı</span><span class="hero-stat-icon">🎯</span></div>
+      ${statCard("clipboard-check", s.solved, "Çözülen Soru")}
+      ${statCard("repeat", s.attempts, "Toplam Deneme")}
+      ${statCard("target", s.avgBest ? "%" + s.avgBest : "—", "Ortalama Başarı")}
     </div>
 
     ${
@@ -55,14 +70,14 @@ export async function statsView() {
             <div class="stats-row head"><span>Konu</span><span>En iyi</span><span>Son</span><span>Deneme</span></div>
             ${rows}
           </div>
-          <div style="margin-top:20px;text-align:center">
-            <button class="btn btn-ghost" data-reset>İlerlemeyi Sıfırla</button>
+          <div class="stats-foot">
+            <button class="btn btn-ghost" data-reset>${icon("refresh")} İlerlemeyi sıfırla</button>
           </div>`
-        : `<div class="empty">
-            <div class="empty-emoji">📊</div>
-            <div class="empty-title">Henüz veri yok</div>
-            <p>Bir konu çalışıp test çözdüğünde ilerlemen burada görünecek.</p>
-          </div>`
+        : `<div class="wrap">${emptyState(
+            "chart",
+            "Henüz veri yok",
+            "Bir konu çalışıp test çözdüğünde ilerlemen burada görünecek."
+          )}</div>`
     }
   </div>`);
 

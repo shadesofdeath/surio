@@ -3,10 +3,9 @@
 import { getSubject } from "../data.js";
 import { recordTest } from "../store.js";
 import { navigate } from "../router.js";
-import {
-  render, errorState, loading, esc, pct,
-  CHECK, CROSS,
-} from "../ui.js";
+import { QUIZ_SIZE, PASS_SCORE, NEAR_SCORE } from "../config.js";
+import { icon } from "../icons.js";
+import { render, errorState, loading, esc, pct } from "../ui.js";
 
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
 
@@ -22,8 +21,7 @@ function shuffle(arr) {
 
 /** Prepare a question: shuffle its options and track the new answer index. */
 function prepare(q) {
-  const idx = q.options.map((_, i) => i);
-  const order = shuffle(idx);
+  const order = shuffle(q.options.map((_, i) => i));
   return {
     question: q.question,
     explanation: q.explanation,
@@ -46,12 +44,16 @@ export async function quizView({ id }) {
     return;
   }
 
+  // Draw up to QUIZ_SIZE random questions from the pool so large banks
+  // produce a fresh test each attempt.
+  const pool = shuffle(subject.questions).slice(0, QUIZ_SIZE);
+
   const quiz = {
     subject,
-    questions: shuffle(subject.questions).map(prepare),
+    questions: pool.map(prepare),
     i: 0,
     correct: 0,
-    picked: null, // index chosen for current question, or null
+    picked: null, // index chosen for the current question, or null
   };
 
   renderQuestion(quiz);
@@ -61,14 +63,15 @@ function renderQuestion(quiz) {
   const total = quiz.questions.length;
   const q = quiz.questions[quiz.i];
   const answered = quiz.picked !== null;
+  const isCorrect = quiz.picked === q.answer;
 
   const optionsHtml = q.options
     .map((opt, i) => {
       let cls = "option";
       let mark = "";
       if (answered) {
-        if (i === q.answer) { cls += " correct"; mark = CHECK; }
-        else if (i === quiz.picked) { cls += " wrong"; mark = CROSS; }
+        if (i === q.answer) { cls += " correct"; mark = icon("check"); }
+        else if (i === quiz.picked) { cls += " wrong"; mark = icon("close"); }
       }
       return `<button class="${cls}" data-opt="${i}" ${answered ? "disabled" : ""}>
         <span class="option-key">${LETTERS[i]}</span>
@@ -78,34 +81,42 @@ function renderQuestion(quiz) {
     })
     .join("");
 
+  let feedback = "";
+  if (answered) {
+    const label = isCorrect
+      ? `<span class="feedback-badge ok">${icon("check")} Doğru</span>`
+      : `<span class="feedback-badge no">${icon("close")} Yanlış</span>`;
+    const body = q.explanation
+      ? esc(q.explanation)
+      : `Doğru cevap: <b>${LETTERS[q.answer]}</b> şıkkı.`;
+    feedback = `<div class="explain">${label}<span>${body}</span></div>`;
+  }
+
   render(`<div class="wrap">
     <div class="quiz-bar">
       <div class="quiz-bar-progress">
         <div class="quiz-bar-count">Soru <b>${quiz.i + 1}</b> / ${total}</div>
-        <div class="progress-track"><div class="progress-fill" style="width:${pct(quiz.i + (answered ? 1 : 0), total)}%"></div></div>
+        <div class="progress-track"><div class="progress-fill" style="width:${pct(
+          quiz.i + (answered ? 1 : 0),
+          total
+        )}%"></div></div>
       </div>
-      <button class="quiz-quit" data-quit>Çıkış</button>
+      <button class="quiz-quit" data-quit>${icon("close")} Çıkış</button>
     </div>
 
     <div class="quiz-card">
-      <span class="quiz-badge">${quiz.subject.icon} ${esc(quiz.subject.title)}</span>
+      <span class="quiz-badge" style="--c:${quiz.subject.color}">
+        <span class="quiz-badge-ic">${icon(quiz.subject.icon)}</span>${esc(quiz.subject.title)}
+      </span>
       <h2 class="quiz-question">${esc(q.question)}</h2>
       <div class="options">${optionsHtml}</div>
-      ${
-        answered && q.explanation
-          ? `<div class="explain"><b>${
-              quiz.picked === q.answer ? "Doğru ✓" : "Yanlış ✗"
-            }</b> — ${esc(q.explanation)}</div>`
-          : answered
-          ? `<div class="explain"><b>${
-              quiz.picked === q.answer ? "Doğru ✓" : "Yanlış ✗"
-            }</b> — Doğru cevap: ${LETTERS[q.answer]}</div>`
-          : ""
-      }
+      ${feedback}
       ${
         answered
           ? `<div class="quiz-foot"><button class="btn btn-primary" data-next>${
-              quiz.i + 1 < total ? "Sonraki Soru →" : "Testi Bitir →"
+              quiz.i + 1 < total
+                ? `Sonraki Soru ${icon("arrow-right")}`
+                : `Testi Bitir ${icon("arrow-right")}`
             }</button></div>`
           : ""
       }
@@ -158,18 +169,24 @@ function finish(quiz) {
   const percent = pct(correct, total);
   const stat = recordTest(quiz.subject.id, correct, total);
 
-  const C = 2 * Math.PI * 58; // ring circumference (r=58)
+  const tone = percent >= PASS_SCORE ? "good" : percent >= NEAR_SCORE ? "mid" : "bad";
+  const C = 2 * Math.PI * 58; // ring circumference (r = 58)
   const offset = C * (1 - percent / 100);
 
-  let title, sub;
-  if (percent >= 85) { title = "Harika! 🎉"; sub = "Bu konuya çok iyi hazırsın."; }
-  else if (percent >= 70) { title = "Geçtin! ✓"; sub = "Sınav barajını aştın, tekrar denemekte fayda var."; }
-  else if (percent >= 50) { title = "Az kaldı 💪"; sub = "Konuyu bir kez daha çalışıp tekrar dene."; }
-  else { title = "Tekrar çalış 📚"; sub = "Önce dersi oku, sonra testi tekrar çöz."; }
+  let statusIcon, title, sub;
+  if (percent >= 85) {
+    statusIcon = "trophy"; title = "Harika sonuç"; sub = "Bu konuya çok iyi hazırsın.";
+  } else if (percent >= PASS_SCORE) {
+    statusIcon = "check"; title = "Tebrikler, geçtin"; sub = "Sınav barajını aştın. Tekrar denemekte fayda var.";
+  } else if (percent >= NEAR_SCORE) {
+    statusIcon = "target"; title = "Az kaldı"; sub = "Konuyu bir kez daha çalışıp tekrar dene.";
+  } else {
+    statusIcon = "book"; title = "Biraz daha çalış"; sub = "Önce dersi oku, sonra testi tekrar çöz.";
+  }
 
   render(`<div class="wrap">
     <div class="result">
-      <div class="result-ring">
+      <div class="result-ring tone-${tone}">
         <svg viewBox="0 0 132 132">
           <circle class="result-ring-track" cx="66" cy="66" r="58"/>
           <circle class="result-ring-fill" cx="66" cy="66" r="58"
@@ -177,6 +194,7 @@ function finish(quiz) {
         </svg>
         <div class="result-pct">%${percent}</div>
       </div>
+      <span class="result-status tone-${tone}">${icon(statusIcon)}</span>
       <h1 class="result-title">${title}</h1>
       <p class="result-sub">${sub}</p>
 
@@ -187,8 +205,8 @@ function finish(quiz) {
       </div>
 
       <div class="result-actions">
-        <a class="btn btn-ghost" href="#/ders/${quiz.subject.id}" data-link>Dersi Tekrar Oku</a>
-        <button class="btn btn-primary" data-retry>Tekrar Çöz</button>
+        <a class="btn btn-ghost" href="#/ders/${quiz.subject.id}" data-link>${icon("book-open")} Dersi oku</a>
+        <button class="btn btn-primary" data-retry>${icon("refresh")} Tekrar çöz</button>
       </div>
     </div>
   </div>`);

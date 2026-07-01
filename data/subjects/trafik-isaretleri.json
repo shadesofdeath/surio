@@ -2,7 +2,7 @@
   "id": "trafik-isaretleri",
   "title": "Trafik İşaretleri",
   "description": "Levhalar, yol çizgileri ve geçiş kuralları",
-  "icon": "🚸",
+  "icon": "sign",
   "color": "#0F7A4D",
   "lessons": [
     {

@@ -2,7 +2,7 @@
   "id": "motor-bilgisi",
   "title": "Motor Bilgisi",
   "description": "Araç tekniği, motor ve bakım soruları",
-  "icon": "🔧",
+  "icon": "engine",
   "color": "#F76808",
   "lessons": [
     {

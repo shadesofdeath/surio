@@ -3,7 +3,7 @@
     "id": "ilk-yardim",
     "title": "İlk Yardım",
     "description": "Acil durumlarda temel ilk yardım bilgisi",
-    "icon": "🚑",
+    "icon": "first-aid",
     "color": "#E5484D",
     "lessonCount": 5,
     "questionCount": 14
@@ -12,7 +12,7 @@
     "id": "trafik-isaretleri",
     "title": "Trafik İşaretleri",
     "description": "Levhalar, yol çizgileri ve geçiş kuralları",
-    "icon": "🚸",
+    "icon": "sign",
     "color": "#0F7A4D",
     "lessonCount": 5,
     "questionCount": 14
@@ -21,7 +21,7 @@
     "id": "motor-bilgisi",
     "title": "Motor Bilgisi",
     "description": "Araç tekniği, motor ve bakım soruları",
-    "icon": "🔧",
+    "icon": "engine",
     "color": "#F76808",
     "lessonCount": 5,
     "questionCount": 14
@@ -30,7 +30,7 @@
     "id": "trafik-adabi",
     "title": "Trafik Adabı",
     "description": "Sürücü davranışları, nezaket ve güvenlik",
-    "icon": "🤝",
+    "icon": "etiquette",
     "color": "#5B5BD6",
     "lessonCount": 5,
     "questionCount": 13

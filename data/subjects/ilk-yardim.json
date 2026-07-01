@@ -2,7 +2,7 @@
   "id": "ilk-yardim",
   "title": "İlk Yardım",
   "description": "Acil durumlarda temel ilk yardım bilgisi",
-  "icon": "🚑",
+  "icon": "first-aid",
   "color": "#E5484D",
   "lessons": [
     {

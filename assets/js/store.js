@@ -28,10 +28,6 @@ function save() {
   } catch { /* storage full / disabled — ignore */ }
 }
 
-export function getState() {
-  return state;
-}
-
 export function markRead(subjectId) {
   state.read[subjectId] = true;
   save();

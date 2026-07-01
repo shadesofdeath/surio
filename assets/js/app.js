@@ -6,6 +6,7 @@ import { studyListView, studyDetailView } from "./views/study.js";
 import { testListView } from "./views/tests.js";
 import { quizView } from "./views/quiz.js";
 import { statsView } from "./views/stats.js";
+import { icon } from "./icons.js";
 import { render } from "./ui.js";
 
 route("/", homeView);
@@ -20,7 +21,7 @@ route("/istatistik", statsView);
 
 setNotFound(() => {
   render(`<div class="wrap"><div class="empty">
-    <div class="empty-emoji">🧭</div>
+    <span class="empty-ic">${icon("compass")}</span>
     <div class="empty-title">Sayfa bulunamadı</div>
     <p>Aradığın sayfa taşınmış olabilir. <a class="section-link" href="#/" data-link>Ana sayfaya dön</a>.</p>
   </div></div>`);

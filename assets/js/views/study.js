@@ -2,7 +2,9 @@
 
 import { getRegistry, getSubject } from "../data.js";
 import { isRead, markRead } from "../store.js";
-import { render, errorState, loading, esc, ARROW_L } from "../ui.js";
+import { QUIZ_SIZE } from "../config.js";
+import { icon } from "../icons.js";
+import { render, errorState, loading, esc } from "../ui.js";
 
 /** List of all subjects to study. */
 export async function studyListView() {
@@ -28,17 +30,21 @@ export async function studyListView() {
 
 function studyCard(s) {
   const read = isRead(s.id);
-  return `<a class="subject-card" href="#/ders/${s.id}" data-link>
+  return `<a class="subject-card is-link" href="#/ders/${s.id}" data-link>
     <div class="subject-top">
-      <div class="subject-icon" style="background:${s.color}1a">${s.icon}</div>
-      <div>
+      <span class="subject-ic" style="--c:${s.color}">${icon(s.icon)}</span>
+      <div class="subject-heading">
         <div class="subject-name">${esc(s.title)}</div>
         <div class="subject-desc">${esc(s.description)}</div>
       </div>
     </div>
     <div class="subject-meta">
       <span><b>${s.lessonCount}</b> konu başlığı</span>
-      <span style="margin-left:auto">${read ? "✓ Okundu" : "Oku →"}</span>
+      <span class="subject-status">${
+        read
+          ? `<span class="dot dot-good"></span>Okundu`
+          : `Oku ${icon("arrow-right")}`
+      }</span>
     </div>
   </a>`;
 }
@@ -62,28 +68,36 @@ export async function studyDetailView({ id }) {
         ${l.body ? `<p class="lesson-p">${esc(l.body)}</p>` : ""}
         ${
           l.points && l.points.length
-            ? `<div class="lesson-points">${l.points
-                .map((p) => `<div class="lesson-point">${esc(p)}</div>`)
-                .join("")}</div>`
+            ? `<ul class="lesson-points">${l.points
+                .map((p) => `<li class="lesson-point">${esc(p)}</li>`)
+                .join("")}</ul>`
             : ""
         }
       </article>`
     )
     .join("");
 
+  const count = Math.min(subject.questions.length, QUIZ_SIZE);
+
   render(`<div class="wrap">
-    <a class="back-link" href="#/ders" data-link>${ARROW_L} Tüm konular</a>
-    <div class="page-head">
-      <h1 class="page-title">${subject.icon} ${esc(subject.title)}</h1>
-      <p class="page-sub">${esc(subject.description)}</p>
+    <a class="back-link" href="#/ders" data-link>${icon("arrow-left")} Tüm konular</a>
+    <div class="subject-hero">
+      <span class="subject-ic lg" style="--c:${subject.color}">${icon(subject.icon)}</span>
+      <div>
+        <h1 class="page-title">${esc(subject.title)}</h1>
+        <p class="page-sub">${esc(subject.description)}</p>
+      </div>
     </div>
 
     <div class="lesson-list">${blocks}</div>
 
     <div class="study-cta">
-      <p>Konuyu bitirdin mi? Şimdi bilgini test et.</p>
+      <div>
+        <div class="study-cta-title">Konuyu bitirdin mi?</div>
+        <p>Şimdi ${count} soruluk testi çözerek bilgini pekiştir.</p>
+      </div>
       <a class="btn btn-primary" href="#/test/${subject.id}" data-link>
-        ${subject.questions.length} soruluk testi çöz →
+        ${icon("clipboard-check")} Testi çöz
       </a>
     </div>
   </div>`);
