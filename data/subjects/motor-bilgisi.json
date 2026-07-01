@@ -2,11 +2,13 @@
   "id": "motor-bilgisi",
   "title": "Motor Bilgisi",
   "description": "Araç tekniği, motor ve bakım soruları",
-  "lesson": [
+  "icon": "🔧",
+  "color": "#F76808",
+  "lessons": [
     {
-      "h": "Temel sistemler",
-      "p": "Aracın güvenli çalışması birbirine bağlı sistemlerle sağlanır.",
-      "list": [
+      "title": "Temel sistemler",
+      "body": "Aracın güvenli çalışması birbirine bağlı sistemlerle sağlanır.",
+      "points": [
         "Yağlama: motor yağı sürtünmeyi ve aşınmayı azaltır",
         "Soğutma: antifriz/su motoru ısınmaya karşı korur",
         "Yakıt ve ateşleme: gücü üretir",
@@ -14,17 +16,18 @@
       ]
     },
     {
-      "h": "Gösterge ve uyarı lambaları",
-      "p": "Kırmızı uyarılar acil müdahale gerektirir.",
-      "list": [
+      "title": "Gösterge ve uyarı lambaları",
+      "body": "Kırmızı uyarılar acil müdahale gerektirir.",
+      "points": [
         "Yağ basıncı lambası yanarsa aracı güvenli yerde durdur",
         "Şarj (akü) lambası alternatör/şarj arızasına işaret eder",
         "Hararet göstergesi yükseldiğinde motoru zorlama"
       ]
     },
     {
-      "h": "Periyodik bakım",
-      "list": [
+      "title": "Periyodik bakım",
+      "body": "",
+      "points": [
         "Motor yağı ve yağ filtresini zamanında değiştir",
         "Lastik diş derinliği ve hava basıncını kontrol et",
         "Fren hidroliği ve balata durumunu izle",
@@ -32,12 +35,14 @@
       ]
     },
     {
-      "h": "Lastik ve frenler",
-      "p": "Fren mesafesi hıza, lastik durumuna ve zemine bağlıdır. Düşük diş derinliği ve yanlış basınç hem yol tutuşunu hem fren performansını düşürür. ABS, ani frende tekerleğin kilitlenmesini önleyerek yönlendirmeyi korur."
+      "title": "Lastik ve frenler",
+      "body": "Fren mesafesi hıza, lastik durumuna ve zemine bağlıdır. Düşük diş derinliği ve yanlış basınç hem yol tutuşunu hem fren performansını düşürür. ABS, ani frende tekerleğin kilitlenmesini önleyerek yönlendirmeyi korur.",
+      "points": []
     },
     {
-      "h": "Arıza belirtileri",
-      "list": [
+      "title": "Arıza belirtileri",
+      "body": "",
+      "points": [
         "Aşırı ısınmada motoru durdurup soğumasını bekle",
         "Yağ/sıvı kaçağı gördüğünde yola çıkma",
         "Marş basmıyorsa önce akü ve bağlantıları kontrol et"

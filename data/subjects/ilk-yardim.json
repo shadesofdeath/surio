@@ -2,24 +2,27 @@
   "id": "ilk-yardim",
   "title": "İlk Yardım",
   "description": "Acil durumlarda temel ilk yardım bilgisi",
-  "lesson": [
+  "icon": "🚑",
+  "color": "#E5484D",
+  "lessons": [
     {
-      "h": "İlk yardımın amacı",
-      "p": "İlk yardım; olay yerinde, tıbbi araç gereç aranmaksızın mevcut imkânlarla yapılan ilaçsız uygulamadır. Amaç hastalığı tedavi etmek değil, durumun kötüleşmesini önleyip yaşamsal işlevleri korumaktır.",
-      "list": [
+      "title": "İlk yardımın amacı",
+      "body": "İlk yardım; olay yerinde, tıbbi araç gereç aranmaksızın mevcut imkânlarla yapılan ilaçsız uygulamadır. Amaç hastalığı tedavi etmek değil, durumun kötüleşmesini önleyip yaşamsal işlevleri korumaktır.",
+      "points": [
         "Önce olay yerini ve kendini güvene al",
         "Sakin ol, panik kararları engeller",
         "Yapamayacağın müdahaleyi deneme"
       ]
     },
     {
-      "h": "Acil çağrı: 112",
-      "p": "Türkiye'de tüm acil durumlar için tek numara 112'dir. Ararken net bilgi ver: kesin adres, olayın türü, yaralı sayısı ve durumları. Onay verilmeden hattı kapatma."
+      "title": "Acil çağrı: 112",
+      "body": "Türkiye'de tüm acil durumlar için tek numara 112'dir. Ararken net bilgi ver: kesin adres, olayın türü, yaralı sayısı ve durumları. Onay verilmeden hattı kapatma.",
+      "points": []
     },
     {
-      "h": "Temel yaşam desteği",
-      "p": "Bilinç kontrolünde kişiye hafifçe dokunup yüksek sesle seslenilir. Bilinç kapalıysa hava yolu açılır ve gerekirse kalp masajı uygulanır.",
-      "list": [
+      "title": "Temel yaşam desteği",
+      "body": "Bilinç kontrolünde kişiye hafifçe dokunup yüksek sesle seslenilir. Bilinç kapalıysa hava yolu açılır ve gerekirse kalp masajı uygulanır.",
+      "points": [
         "Hava yolu: baş geri, çene yukarı",
         "Kalp masajı derinliği: en az 5 cm",
         "Bası hızı: dakikada 100-120",
@@ -27,16 +30,17 @@
       ]
     },
     {
-      "h": "Kanama ve şok",
-      "p": "Dış kanamada en etkili yöntem temiz bezle yaraya doğrudan ve sürekli baskıdır. Turnike yalnızca baskıyla durmayan, hayatı tehdit eden kol/bacak kanamalarında son çare olarak kullanılır.",
-      "list": [
+      "title": "Kanama ve şok",
+      "body": "Dış kanamada en etkili yöntem temiz bezle yaraya doğrudan ve sürekli baskıdır. Turnike yalnızca baskıyla durmayan, hayatı tehdit eden kol/bacak kanamalarında son çare olarak kullanılır.",
+      "points": [
         "Şok pozisyonu: sırtüstü, ayaklar ~30 cm yukarı",
         "Yaralıyı sıcak tut, ağızdan bir şey verme"
       ]
     },
     {
-      "h": "Pozisyon, kırık ve yanık",
-      "list": [
+      "title": "Pozisyon, kırık ve yanık",
+      "body": "",
+      "points": [
         "Bilinci kapalı ama soluğu olan kişi: koma (yan yatış) pozisyonu",
         "Kırık şüphesinde uzuv oynatılmaz, olduğu gibi sabitlenir",
         "Yanıkta 15-20 dakika oda sıcaklığında akan su; macun-yoğurt sürülmez"

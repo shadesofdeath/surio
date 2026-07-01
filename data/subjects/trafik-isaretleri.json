@@ -2,11 +2,13 @@
   "id": "trafik-isaretleri",
   "title": "Trafik İşaretleri",
   "description": "Levhalar, yol çizgileri ve geçiş kuralları",
-  "lesson": [
+  "icon": "🚸",
+  "color": "#0F7A4D",
+  "lessons": [
     {
-      "h": "İşaret grupları",
-      "p": "Trafik işaretleri görevini şeklinden ve renginden tanırsın. Beş ana grup vardır.",
-      "list": [
+      "title": "İşaret grupları",
+      "body": "Trafik işaretleri görevini şeklinden ve renginden tanırsın. Beş ana grup vardır.",
+      "points": [
         "Tehlike uyarı: kırmızı kenarlı üçgen",
         "Trafik tanzim (yasak/emir): yuvarlak",
         "Bilgi işaretleri: mavi/yeşil dikdörtgen",
@@ -15,8 +17,9 @@
       ]
     },
     {
-      "h": "Renklerin anlamı",
-      "list": [
+      "title": "Renklerin anlamı",
+      "body": "",
+      "points": [
         "Kırmızı: yasaklama ve tehlike",
         "Mavi: emir ve bilgilendirme",
         "Yeşil: yön ve otoyol bilgisi",
@@ -24,21 +27,23 @@
       ]
     },
     {
-      "h": "Yol çizgileri",
-      "p": "Yatay işaretler de en az levhalar kadar bağlayıcıdır.",
-      "list": [
+      "title": "Yol çizgileri",
+      "body": "Yatay işaretler de en az levhalar kadar bağlayıcıdır.",
+      "points": [
         "Devamlı (tek) çizgi geçilmez, sollama yapılmaz",
         "Kesik çizgi kurallara uygun geçişe izin verir",
         "Yaya geçidi çizgilerinde yayaya öncelik verilir"
       ]
     },
     {
-      "h": "Önceliklendirme sırası",
-      "p": "İşaretler çeliştiğinde uyulacak sıra önemlidir: trafik görevlisi > ışıklı işaret cihazı > trafik işaret levhası > yer (yatay) işaretleri. Görevlinin işareti her zaman önceliklidir."
+      "title": "Önceliklendirme sırası",
+      "body": "İşaretler çeliştiğinde uyulacak sıra önemlidir: trafik görevlisi > ışıklı işaret cihazı > trafik işaret levhası > yer (yatay) işaretleri. Görevlinin işareti her zaman önceliklidir.",
+      "points": []
     },
     {
-      "h": "Işıklı işaretler",
-      "list": [
+      "title": "Işıklı işaretler",
+      "body": "",
+      "points": [
         "Kırmızı: dur",
         "Sarı: dur çizgisinde güvenle durabiliyorsan dur",
         "Yeşil: yol açık, dikkatle geç",

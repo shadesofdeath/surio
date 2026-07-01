@@ -2,14 +2,18 @@
   "id": "trafik-adabi",
   "title": "Trafik Adabı",
   "description": "Sürücü davranışları, nezaket ve güvenlik",
-  "lesson": [
+  "icon": "🤝",
+  "color": "#5B5BD6",
+  "lessons": [
     {
-      "h": "Trafik adabı nedir",
-      "p": "Trafik adabı; yazılı kuralların ötesinde nezaket, empati ve sorumluluk anlayışıdır. Yol paylaşılan ortak bir alandır; her sürücünün davranışı diğerlerinin güvenliğini etkiler."
+      "title": "Trafik adabı nedir",
+      "body": "Trafik adabı; yazılı kuralların ötesinde nezaket, empati ve sorumluluk anlayışıdır. Yol paylaşılan ortak bir alandır; her sürücünün davranışı diğerlerinin güvenliğini etkiler.",
+      "points": []
     },
     {
-      "h": "Sürücü davranışı",
-      "list": [
+      "title": "Sürücü davranışı",
+      "body": "",
+      "points": [
         "Sabırlı ol, öfkeni yönetmeyi öğren",
         "Yol hiddetinden (road rage) kaçın",
         "Hak tanı, sıkıştırma ve gereksiz korna çalma",
@@ -17,25 +21,27 @@
       ]
     },
     {
-      "h": "Korunmasız yol kullanıcıları",
-      "p": "Yaya, bisikletli, çocuk, yaşlı ve engelliler trafiğin en korunmasız kesimidir.",
-      "list": [
+      "title": "Korunmasız yol kullanıcıları",
+      "body": "Yaya, bisikletli, çocuk, yaşlı ve engelliler trafiğin en korunmasız kesimidir.",
+      "points": [
         "Yaya geçidinde önceliği daima yayaya ver",
         "Okul ve yerleşim bölgelerinde hızını düşür",
         "Bisikletliyle aranda güvenli mesafe bırak"
       ]
     },
     {
-      "h": "Güvenli iletişim",
-      "list": [
+      "title": "Güvenli iletişim",
+      "body": "",
+      "points": [
         "Takip mesafeni koru",
         "Şerit değiştirmeden önce sinyal ver",
         "Korna ve selektörü uyarı amacıyla, yerinde kullan"
       ]
     },
     {
-      "h": "Dikkat ve sorumluluk",
-      "p": "Yorgun, uykusuz veya dikkati dağınıkken araç kullanma. Direksiyondayken cep telefonu kullanmak tepki süresini ciddi şekilde uzatır ve kaza riskini artırır."
+      "title": "Dikkat ve sorumluluk",
+      "body": "Yorgun, uykusuz veya dikkati dağınıkken araç kullanma. Direksiyondayken cep telefonu kullanmak tepki süresini ciddi şekilde uzatır ve kaza riskini artırır.",
+      "points": []
     }
   ],
   "questions": [
